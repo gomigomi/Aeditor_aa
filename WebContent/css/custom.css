@@ -1,0 +1,67 @@
+#wrapper{
+    width: 80%;
+    margin: 0 auto;
+}
+#top_wrapper{
+	background-image:url('../img/bg-img.jpg');	
+	background-size: cover;
+	position: relative;
+	width: 100%;
+	height: 0;
+	overflow: hidden;
+	padding-bottom: 50%;
+}
+.top-bg img{	
+	position: absolute;
+	top: 0px;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+#top_img{
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+}
+#top_bar{
+    position: relative;
+    z-index: 2;
+}
+#logo{
+    display: inline-block;
+}
+#logo_img{}
+#login{
+    display: inline-block;
+    float: right;
+}
+#top_content{
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+#top_search{
+    position: relative;
+    z-index: 2;
+}
+#top_calendar{}
+#top_residence{}
+#top_child_age{}
+#top_search_btn{}
+#mid_wrapper{}
+#mid_content1{	
+	background-image:url('../img/bg-mid-img.jpg');	
+	background-size: cover;
+	position: relative;
+	width: 100%;
+	height: 0;
+	overflow: hidden;
+	padding-bottom: 50%;
+}
+.mid_content{}
+.mid_content_profile{}
+.mid_content_thumb{}
+#mid_content2{}
+#mid_content3{}
+#bottom_wrapper{}
