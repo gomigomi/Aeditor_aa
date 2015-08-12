@@ -1,17 +1,40 @@
-#top_image{}
-#deco_img{}
-#link_aeditor{
-	top : 
+#NameTxt{
+	max-width : 600px;
+	margin : auto;
 }
-#join_aeditor_img{
-	
+#EmailTxt{
+	max-width : 600px;
+	margin : auto;
 }
-#link_parents{
-	border-radius : 100%
+#PasswordTxt{
+	max-width : 600px;
+	margin : auto;
 }
-#join_parents_img{
-	
+#PasswordConfirmTxt{
+	max-width : 600px;
+	margin : auto;
 }
-.deco_img{
-	
+#PhoneTxt{
+	max-width : 600px;
+	margin : auto;
+}
+#PrivacyAgreement{
+	max-width : 600px;
+	margin : auto
+}
+#MemberAgreement{
+	max-width : 600px;
+	margin : auto
+}
+#GetInfoAgreement{
+	max-width : 600px;
+	margin : auto
+}
+#JoinParents{
+	max-width : 600px;
+	margin : auto
+}
+#JoinTeacher{
+	max-width : 600px;
+	margin : auto
 }
