@@ -7,12 +7,13 @@
 		<title>애:디터 회원가입</title>
 				
 		<link rel="stylesheet" type="text/css" href="css/JoinPage.css">
+		<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
 		<script src="js/JoinPage.js"></script>
 	</head>
 
 	<body>
 		<div id="NameTxt">
-			이름<input type="text" name="NameTxt">
+			이름<input id="Name" type="text" name="NameTxt">
 		</div>
 		<div id="EmailTxt">
 			이메일<input type="text" name="EmailTxt">
@@ -42,9 +43,9 @@
 			'애:디터'의 신나는 이야기를 모두 듣고 싶어요(문자 및 이메일 수신동의)
 		</div>
 		<div id="JoinBtn">
-				<img onclick="onClick_JoinParentsBtn" id="JoinParentsBtn" src="img/JoinPage/JoinParents.png">
+				<img id="JoinParentsBtn" src="img/JoinPage/JoinParents.png">
 			
-				<img onclick="onClick_JoinTeacherBtn" id="JoinTeacherBtn" src="img/JoinPage/JoinTeacher.png">
+				<img id="JoinTeacherBtn" src="img/JoinPage/JoinTeacher.png">
 		</div>
 	</body>
 </html>

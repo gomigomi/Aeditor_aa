@@ -1,6 +1,17 @@
-$(function onclick_JoinParentsBtn(){
-	window.location='JoinParents.html';
-})
-$(function onclick_JoinTeacherBtn(){
-	window.location='JoinTeacher.html';
+
+
+$(function(){
+	$('#JoinParentsBtn').click(function(){
+		
+		var i=$('#Name').val();
+		if(i==false){
+			alert('write your name down!');
+		}else{
+		
+		window.location='JoinParents.html';
+		
+		}
+	
+	})
+	
 })
