@@ -1,17 +1,66 @@
-#top_image{}
-#deco_img{}
-#link_aeditor{
-	top : 
+#NameTxt{
+	max-width : 600px;
+	margin : auto;
+	padding : 5px;
+	padding-top : 4em;
 }
-#join_aeditor_img{
-	
+#EmailTxt{
+	max-width : 600px;
+	margin : auto;
+	padding : 5px;
 }
-#link_parents{
-	border-radius : 100%
+#PasswordTxt{
+	max-width : 600px;
+	margin : auto;
+	padding : 5px;
 }
-#join_parents_img{
-	
+#PasswordConfirmTxt{
+	max-width : 600px;
+	margin : auto;
+	padding : 5px;
 }
-.deco_img{
-	
+#PhoneTxt{
+	max-width : 600px;
+	margin : auto;
+	padding : 5px;
+}
+#PrivacyAgreement{
+	max-width : 600px;
+	margin : auto;
+	padding-top: 4em;
+}
+#MemberAgreement{
+	max-width : 600px;
+	margin : auto;
+	padding: 1em;
+}
+#GetInfoAgreement{
+	max-width : 600px;
+	margin : auto;
+}
+#JoinBtn{
+	display: table;
+	max-width : 600px;
+	margin : auto;
+	padding: 5em;
+}
+#JoinParents{
+	max-width : 600px;
+	margin : auto;
+  display:inline-block;
+}
+#JoinParentsBtn{
+	background-color: rgb(144, 212, 186);
+	display: inline-block;
+	border-radius: 100%;
+}
+#JoinTeacher{
+	max-width : 600px;
+	margin : auto;
+	display: inline-block;
+}
+#JoinTeacherBtn{
+	background-color: rgb(144, 212, 186);
+	display: inline-block;
+	border-radius: 100%;
 }
