@@ -1,0 +1,26 @@
+#fixed_top{
+}
+#logo{}
+#logo img{}
+.top_right{
+    float: right;
+    margin-top: 1.5%;
+}
+.top_right button{
+}
+#user_on{}
+#user_off{}
+#content_wrapper{}
+#fixed_bottom{}
+#bottom1{
+    background-color: #273a43;
+    color: #56bc9b;
+    padding: 2% 10%;
+}
+#bottom2{
+    background-color: #152227;
+    color: #56bc9b;
+    padding: 2% 10%;
+}
+
+
