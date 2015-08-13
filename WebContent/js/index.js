@@ -20,4 +20,6 @@ $(function(){
 		}
 		$('#content_wrapper').load("LoginPage.html");
 	});
+	
+	$('#datepicker').datepicker();
 })

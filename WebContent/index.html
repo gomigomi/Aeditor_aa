@@ -8,10 +8,13 @@
 		<!-- CSS 추가 -->
 		<link rel="stylesheet" href="css/bootstrap.min.css">
 		<link rel="stylesheet" href="css/index.css">
+		<link rel="stylesheet" href="css/jquery-ui.min.css">
+		<link rel="stylesheet" href="css/jquery-ui.structure.css">
 		
 		<!-- JS 추가 -->
 		<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
+		<script src="js/jquery-ui.min.js"></script>
 		<script src="js/index.js"></script>
 	</head>
 
@@ -28,7 +31,39 @@
 		
 		<div id="content_wrapper">
 			<div id="main_view" style="display:block;">
-				<div id="top_silde">
+				<div id="top_silde" style="position:relative;">
+					<div id="absolute_wrapper">
+					<div id="slide_content">
+						<div id="carousel-text">
+							<h3>소중한 내아이와 하하하하하핫</h3>
+							<p>아이를 잘 아는...하하핫!!!</p>
+						</div>
+						<div id="how_to_area">
+							<button id="how_to_btn">이용방법</button>
+						</div>
+						
+					</div>
+						<div id="search_row"><center>
+							<div id="search_cal"><input type="text" 달력 id="datepicker"></div>
+							<div id="search_loc">거주지 </div>
+							<div id="search_age">
+								<select>
+									<option value="" selected="selected">아이 나이</option>
+									<option value="">4</option>
+									<option value="">5</option>
+									<option value="">6</option>
+									<option value="">7</option>
+									<option value="">8</option>
+									<option value="">9</option>
+									<option value="">10</option>
+									<option value="">11</option>
+									<option value="">12</option>
+									<option value="">13</option>
+								</select>
+							</div>
+							<div id="search_btn"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></div>
+						</center></div>
+					</div>
 					<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
 					  <!-- Indicators -->
 					  <ol class="carousel-indicators">
@@ -40,17 +75,9 @@
 					  <div class="carousel-inner" role="listbox">
 					    <div class="item active">
 					      <img src="/img/main/slide2.png">
-					      <div class="carousel-caption">
-					        <h3>소중한 내 아이와 어쩌고..</h3>
-					        <p>아이를 잘 아는 어쩌고...</p>
-					      </div>
 					    </div>
 					    <div class="item">
 					      <img src="/img/main/slide1.png">
-					      <div class="carousel-caption">
-			 		        <h3>소중한 내 아이와 어쩌고..</h3>
-					        <p>아이를 잘 아는 어쩌고...</p>
-					      </div>
 					    </div>
 					  </div>
 					
