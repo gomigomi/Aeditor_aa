@@ -33,7 +33,12 @@
     color: #56bc9b;
     padding: 2% 10%;
 }
-#mid-item{}
+#mid-item{
+    display: table;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 5em;
+}
 #mid-video{
     position: relative;
     top: 7em;
@@ -65,11 +70,11 @@
     margin-bottom: 1%;
 }
 #service_intro{
-    width: 25%;
+    width: 20%;
     margin-right: 1.25%;
 }
 #how_to_use{
-    width: 51%;
+    width: 45%;
     margin-right: 1%;
 }
 #one_on_one{
@@ -143,4 +148,12 @@
 }
 #search_btn span{
     margin-top: 0.8em;
+}
+.item-wrapper{
+    background-color: rebeccapurple;
+    display: inline-block;
+    width: 14em;
+    height: 16em;
+    border-radius: 2em;
+    margin: 0.5em;
 }
