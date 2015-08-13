@@ -1,10 +1,14 @@
 #fixed_top{
+    padding: 1%;
     position: absolute;
     Z-INDEX: 2;
     WIDTH: 100%;
 }
 #logo{}
-#logo img{}
+#logo img{
+    max-width: 100%;
+    height: auto;
+}
 .top_right{
     float: right;
     margin-top: 1.5%;
@@ -90,7 +94,7 @@
     color: white;
     text-align: center;
     width: 100%;
-    top: 13%;
+    top: 22%;
 }
 #carousel_text{}
 #how_to_use_btn{}
@@ -98,9 +102,12 @@
     position: absolute;
     z-index: 2;
     color: white;
-    bottom: 10px;
+    bottom: 0;
     display: table;
     width: 100%;
+    text-align: center;
+    padding: 2%;
+    background: rgba(0,0,0,0.4);
 }
 #absolute_wrapper{
     position: absolute;
@@ -111,6 +118,29 @@
     color: black;
     display: inline-block;
 }
-#search_loc{    display: inline-block;}
-#search_age{    color: black;    display: inline-block;}
-#search_btn{    display: inline-block;}
+#search_cal input{
+    background: rgba(255,255,255,0.5);
+    border: 0;
+    border-top-left-radius: 0.5em;
+    border-bottom-left-radius: 0.5em;
+    height: 3em;
+}
+#search_loc{    color: black;    display: inline-block;    margin: 0 0.4%;}
+#search_loc input{
+    background: rgba(255,255,255,0.5);     border: 0;               
+    height: 3em;
+}
+#search_age{    color: black;    display: inline-block;    background: rgba(255,255,255,0.5);    height: 3em;}
+#search_age select{
+    background: transparent;                    
+    border: 0;
+    margin-top: 0.78em;
+}
+#search_btn{    display: inline-block;    background: rgba(96,194,156,0.4);    border-top-right-radius: 0.5em;    border-bottom-right-radius: 0.5em;    margin-left: 0.4%;    width: 5em;    height: 3em;}
+.slide_ol_custom{
+    bottom: 30%;
+    
+}
+#search_btn span{
+    margin-top: 0.8em;
+}

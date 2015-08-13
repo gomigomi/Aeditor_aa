@@ -209,6 +209,7 @@
 	top: 0;
 	left: 0;
 	cursor: default;
+	background-color: white;
 }
 .ui-button {
 	display: inline-block;
@@ -360,6 +361,15 @@ button.ui-button::-moz-focus-inner {
 	line-height: 1.8em;
 	text-align: center;
 }
+
+.ui-datepicker-month{
+    color: red;
+}
+
+.ui-datepicker-year{
+    color: rgba(255,209,165,1);
+}
+
 .ui-datepicker .ui-datepicker-title select {
 	font-size: 1em;
 	margin: 1px 0;
@@ -369,10 +379,12 @@ button.ui-button::-moz-focus-inner {
 	width: 45%;
 }
 .ui-datepicker table {
+	background-color: white;
 	width: 100%;
 	font-size: .9em;
 	border-collapse: collapse;
 	margin: 0 0 .4em;
+	color: red;
 }
 .ui-datepicker th {
 	padding: .7em .3em;
