@@ -1,0 +1,29 @@
+/*이미지가 없어서 외곽선용과 탭은 공통된 모양이므로*/
+.shape{
+	border-color: black;
+	border-style: solid;
+	padding: 5px;
+}
+.tab{
+}
+/*왼쪽 자기 정보를 박스화*/
+#myProfile{
+	display: inline-block;
+}
+#myPicture{}
+#changePictureBtn{}
+#authenticated_Self{
+}
+#authenticated_School{}
+#myWork{}
+#myWorkList{}
+/*오른쪽 변경메뉴를 박스화*/
+#manageBox{
+	display: inline-block;
+}
+#tabControl{}
+#classTab{}
+#reviewTab{}
+#messageTab{}
+#AcceptionTab{}
+#viewControl{}
