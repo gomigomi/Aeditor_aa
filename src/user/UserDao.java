@@ -34,5 +34,37 @@ public class UserDao {
 		}
 		return dbConn;
 	}
+	
+	public String postUser(Map<String, String[]> userParam){
+		Connection conn=null;
+		Statement stmt=null;
+		String result="success";
+		
+		try{
+			conn=getConnection();
+			
+			stmt=conn.createStatement();
+			String sql="INSERT INTO user(name, email, phone, pass, class)" +
+			"VALUES('"+userParam.get("name")[0].toString()+"',"+userParam.get("email")[0].toString()+"',"+userParam.get("phone")[0].toString()+"',"+userParam.get("pass")[0].toString()+"','1')";
+			stmt.executeUpdate(sql);
+
+			stmt.close();
+			conn.close();
+
+		}catch(SQLException se){
+			se.printStackTrace();
+			result = "fail";
+		}catch(Exception e){
+			e.printStackTrace();
+			result = "fail";
+		}finally{
+			
+		}
+		
+		return result;
+		
+	}
+	
+	
 
 }
