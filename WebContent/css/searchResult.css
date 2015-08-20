@@ -1,0 +1,92 @@
+#searchResult_wrapper{
+    width: 85%;
+    margin: 0 auto;
+}
+
+#search_wrapper{
+    width: 59%;
+    display: inline-block;
+}
+#order_wrapper{
+    text-align: right;
+}
+#score_order{}
+#pay_order{}
+#write_order{}
+.content{
+    width: 47%;
+    display: inline-block;
+    border: 1px solid rgb(222,222,222);
+    border-radius: 0.5em;
+    margin: 1% 1%;
+}
+
+.content-top{
+    width: 100%;
+    height: 12em;
+}
+.content-img{     
+    width: 23.4%;
+    height: 12em;
+    position: absolute;
+}
+.content-img img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    border-top-left-radius: 0.5em;
+    border-top-right-radius: 0.5em;
+}
+.title{
+    z-index: 6;
+    position: relative;
+    top: 40%;
+    text-align: center;
+}
+.icons{
+    position: absolute;
+    z-index: 2;
+    bottom: 0;
+    right: 0;
+}
+.authorized{}
+.imm-contact{}
+.monthly-contact{}
+
+.content-bottom{
+    margin: 1em;
+}
+.content-score{}
+.content-payment{}
+.content-available{}
+.content-tags{}
+
+#search_item{
+    width: 40%;
+    display: inline-block;
+    vertical-align: top;
+}
+#search_location{}
+#search_date{}
+#search_time{}
+#search_age{}
+#search_payment{}
+#license{
+    display: inline-block;
+}
+#expert{
+    display: inline-block;
+}
+#related_department{
+    display: inline-block;
+}
+#sex{}
+#how_many{}
+#immediateContact{}
+#monthlyContact{}
+#search_item table{}
+#search_item table tr{}
+#search_item table tr td{
+    padding: 1em;
+}

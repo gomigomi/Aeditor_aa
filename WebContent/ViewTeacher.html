@@ -2,9 +2,45 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>애;디터 - 선생님 보</title>
+		<!-- CSS 추가 -->
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/viewTeacher.css">
+		<link rel="stylesheet" href="css/jquery-ui.min.css">
+		<link rel="stylesheet" href="css/jquery-ui.structure.css">
+		
+		<!-- JS 추가 -->
+		<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/jquery-ui.min.js"></script>
+		<script src="js/viewTeacher.js"></script>
 </head>
 <body>
-
+	<div id="cover_img">
+		커버 이미지 한개만..
+	</div>
+	<div id="teacherView_navi">
+		<ul class="nav nav-tabs">
+		  <li role="presentation" class="active"><a href="#">상세정보</a></li>
+		  <li role="presentation"><a href="#">활동사진</a></li>
+		  <li role="presentation"><a href="#">후기</a></li>
+		</ul>
+	</div>
+	<div id="content_wrapper">
+		<div id="teacherView_wrapper">
+			<div id="teacherView_detail">사진과 정보 및 자기소개</div>
+			<div id="teacherView_imgs">이미지 앨범</div>
+			<div id="teacherView_review">리뷰~</div>
+		</div>
+		<div id="teacherView_reserv_wrapper">
+			<div id="datepicker"></div>
+			<div id="button_wrapper">
+				<div id="monthly_btn">정기보육신청하기</div>
+				<div id="reserv_btn">예약하기</div>
+				<div id="imm_reserv_btn">즉시 예약하기</div>
+			</div>
+		</div>
+	</div>
+	
 </body>
 </html>

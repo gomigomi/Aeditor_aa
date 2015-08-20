@@ -1,0 +1,53 @@
+body{
+    background-color: rgb(222,222,222);
+}
+#cover_img{
+    background-color: yellowgreen;
+    height: 10em;
+}
+#teacherView_navi{
+    width: 70%;
+    margin: 0 auto;
+}
+#teacherView_wrapper{
+    background-color: white;
+    width: 50%;
+    display: table-cell;
+}
+#teacherView_detail{}
+#teacherView_imgs{}
+#teacherView_review{}
+#teacherView_reserv_wrapper{
+    background-color: white;     
+    width: 20%;     
+    display: table-cell;
+    border-left: 1em solid rgb(222,222,222);
+}
+#button_wrapper{
+    border-top: 1em solid rgb(222,222,222);
+    padding: 14% 0;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+#monthly_btn{
+    background-color: rgb(144,212,186);
+    width: 80%;
+    margin: 0 auto;
+    padding: 3%;
+    margin-bottom: 2%;
+}
+#reserv_btn{    background-color: rgb(153,153,153);
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 2%;    padding: 3%;}
+#imm_reserv_btn{    background-color: rgb(241,48,29);
+    width: 80%;
+    margin: 0 auto;
+    padding: 3%;}
+#content_wrapper{
+    display: table;
+    /* text-align: center; */
+    margin: 0 auto;
+    width: 70%;
+}

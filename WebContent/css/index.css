@@ -152,8 +152,8 @@
 .item-wrapper{
     background-color: rebeccapurple;
     display: inline-block;
-    width: 14em;
+    width: 16em;
     height: 16em;
-    border-radius: 2em;
-    margin: 0.5em;
+    border-radius: 100%;
+    margin: 1.5em;
 }
