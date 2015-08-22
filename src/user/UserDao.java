@@ -36,6 +36,7 @@ public class UserDao {
 	}
 	
 	public String postUser(Map<String, String[]> userParam){
+		
 		Connection conn=null;
 		Statement stmt=null;
 		String result="success";
@@ -45,7 +46,8 @@ public class UserDao {
 			
 			stmt=conn.createStatement();
 			String sql="INSERT INTO user(name, email, phone, pass, class)" +
-			"VALUES('"+userParam.get("name")[0].toString()+"',"+userParam.get("email")[0].toString()+"',"+userParam.get("phone")[0].toString()+"',"+userParam.get("pass")[0].toString()+"','1')";
+			"VALUES('"+userParam.get("name")[0].toString()+"','"+userParam.get("email")[0].toString()+"','"+userParam.get("phone")[0].toString()+"','"+userParam.get("pass")[0].toString()+"','1')";
+			
 			stmt.executeUpdate(sql);
 
 			stmt.close();

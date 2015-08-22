@@ -16,6 +16,7 @@
 		<script src="js/bootstrap.min.js"></script>
 		<script src="js/jquery-ui.min.js"></script>
 		<script src="js/index.js"></script>
+		<script src="js/JoinPage.js"></script>
 	</head>
 
 	<body>
@@ -24,8 +25,8 @@
 			<span id="help" class="top_right"><button id="help_btn">도움말</button></span>
 			<span id="user_on" class="top_right" style="display:none">썸네일+아이디</span>
 			<span id="user_off" class="top_right">
-				<button id="login_btn">로그인</button>
-				<button id="signup_btn">회원가입</button>
+				<button id="login_btn" type="button" data-toggle="modal" data-target="#logIn">로그인</button>
+				<button id="signup_btn" type="button" data-toggle="modal" data-target="#signUp">회원가입</button>
 			</span>
 		</div>
 		
@@ -122,6 +123,63 @@
 		<div id="fixed_bottom">
 			<div id="bottom1">회사소개/자주묻는질문/약관/소식<br><br><br><br><br><br><br></div>
 			<div id="bottom2">copyright @ all reserved by</div>
+		</div>
+
+		<!-- LogIn Modal -->
+		<div class="modal fade" id="logIn" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		  <div class="modal-dialog" style="width:30em;">
+		    <div class="modal-content">
+		      <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="margin: 0.2em 0.5em;"><span aria-hidden="true">&times;</span></button>
+		      <div class="modal-body">
+		      <div id="logInInput">
+			   <input id="LoginEmail" type="text" name="EmailTxt" placeholder="이메일"><br/>
+		       <input id="LoginPass" type="password" name="PasswordTxt" placeholder="비밀번호"><br/>
+			</div>
+			<div id="save_info">
+				<input type="checkbox" name="saveID"> 아이디 저장
+				<input type="checkbox" name="savePW"> 비밀번호 저장
+			</div>
+		<div id="FindArea">
+			<div id="login_modal_signUp">
+			<span>아직도 애;디터 회원이 아니세요?</span>
+			<span id="login_modal_signUp_btn">등록하기</span>
+			</div>
+			<div id="login_modal_find">
+			<span>아이디/비밀번호가 기억나지 않으세요?</span>
+			<span id="login_modal_find_btn">찾기</span>
+			</div>
+		</div>
+		<div class="ModalBtn"><span>로그인</span></div>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+		
+		<!-- SignUp Modal -->
+		<div class="modal fade" id="signUp" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		  <div class="modal-dialog" style="width:25em;">
+		    <div class="modal-content">
+		      <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="margin: 0.2em 0.5em;"><span aria-hidden="true">&times;</span></button>
+		      <div class="modal-body">
+		      <div id="signUpInput">
+		       <input id="SignupName" type="text" name="NameTxt" placeholder="이름"><br/>
+			   <input id="SignupEmail" type="text" name="EmailTxt" placeholder="이메일"><br/>
+		       <input id="SignupPhone" type="text" name="PhoneTxt" placeholder="휴대폰번호"><br/>
+		       <input id="SignupPass" type="password" name="PasswordTxt" placeholder="비밀번호"><br/>
+		       <input id="SignupPassConf" type="password" name="PasswordConfirmTxt" placeholder="비밀번호 확인">
+			</div>
+		<div id="Agreement">
+			<input type="checkbox" name="PrivacyAgreement">
+			개인정보 수집 및 이용에 모두 동의합니다.<br/>
+			<input type="checkbox" name="MemberAgreement">
+			회원 약관에 모두 동의합니다.<br/>
+			<input type="checkbox" name="GetInfoAgreement">
+			'애:디터'의 신나는 이야기를 모두 듣고 싶어요(문자 및 이메일 수신동의)<br/>
+		</div>
+		<div id="RegisterBtn" class="ModalBtn"><span>등록하기</span></div>
+		      </div>
+		    </div>
+		  </div>
 		</div>
 	</body>
 </html>

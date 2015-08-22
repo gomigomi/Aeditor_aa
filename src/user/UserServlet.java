@@ -58,6 +58,7 @@ public class UserServlet extends HttpServlet {
 
 		PrintWriter printout = response.getWriter();
 		JSONObject JObject = new JSONObject();
+		
 		String type = request.getParameter("type");
 
 		UserDao dao = new UserDao();
