@@ -18,7 +18,7 @@ public class UserDao {
 	static final String PASS = "ra&eul";
 	
 	/**
-	 * 커넥션 공동 메소드
+	 * 
 	 * @returna
 	 * @throws ClassNotFoundException
 	 */
@@ -64,7 +64,35 @@ public class UserDao {
 		}
 		
 		return result;
+	}
+	public String searchEmail(Map<String, String[]> userParam){
+		Connection conn=null;
+		Statement stmt=null;
+		String result="success";
 		
+		try{
+			conn=getConnection();
+			
+			stmt=conn.createStatement();
+			String sql=" SELECT name FROM user" +
+			" WHERE name= " + userParam.get("name")[0].toString();
+			
+			stmt.executeUpdate(sql);
+
+			stmt.close();
+			conn.close();
+
+		}catch(SQLException se){
+			se.printStackTrace();
+			result = "fail";
+		}catch(Exception e){
+			e.printStackTrace();
+			result = "fail";
+		}finally{
+			
+		}
+		
+		return result;
 	}
 	
 	
