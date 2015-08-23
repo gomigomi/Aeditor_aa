@@ -1,10 +1,12 @@
 #searchResult_wrapper{
-    width: 85%;
+    width: 55em;
     margin: 0 auto;
+    background-color: white;
+    padding: 1.1em;
 }
 
 #search_wrapper{
-    width: 59%;
+    width: 32em;
     display: inline-block;
 }
 #order_wrapper{
@@ -14,19 +16,22 @@
 #pay_order{}
 #write_order{}
 .content{
-    width: 47%;
+    width: 15em;
     display: inline-block;
     border: 1px solid rgb(222,222,222);
     border-radius: 0.5em;
     margin: 1% 1%;
 }
-
+body{
+    background-color: rgb(233,233,233);
+    
+}
 .content-top{
     width: 100%;
     height: 12em;
 }
 .content-img{     
-    width: 23.4%;
+    width: 14.9em;
     height: 12em;
     position: absolute;
 }
@@ -63,7 +68,7 @@
 .content-tags{}
 
 #search_item{
-    width: 40%;
+    width: 20em;
     display: inline-block;
     vertical-align: top;
 }

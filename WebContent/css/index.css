@@ -66,23 +66,23 @@
 }
 #first_row{
     margin: 0 auto;
-    width: 70%;
+    width: 50em;
     margin-bottom: 1%;
 }
 #service_intro{
-    width: 20%;
+    width: 10em;
     margin-right: 1.25%;
 }
 #how_to_use{
-    width: 45%;
+    width: 23.5em;
     margin-right: 1%;
 }
 #one_on_one{
-    width: 20%;
+    width: 15em;
     float: right;
 }
 #second_row{
-    width: 70%;
+    width: 50em;
     background: rgba(96,194,156,.7);
     margin: 0 auto;
     height: 9em;
