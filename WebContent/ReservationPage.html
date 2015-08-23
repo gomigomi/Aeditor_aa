@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>애;디터 예약페이지</title>
+		<!-- CSS 추가 -->
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/ReservationPage.css">
+		<link rel="stylesheet" href="css/jquery-ui.min.css">
+		<link rel="stylesheet" href="css/jquery-ui.structure.css">
+		
+		<!-- JS 추가 -->
+		<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/jquery-ui.min.js"></script>
+		<script src="js/ReservationPage.js"></script>
+
+	</head>
+	<body>
+	
+		<div id="RP_level">
+			<img id="RP_1st" src="img/ReservationPage/RP-1st.png"/>
+			<img id="RP_2nd" style="display:none;" src="img/ReservationPage/RP-2nd.png"/>
+		</div>
+		
+		<div id="RP_wrapper">
+			<div id="RP_1page">
+				<div id="RP_teacherInfo">
+				<b>선생님 정보<br><br></b>
+					<div id="RP_teacher_thumb">
+						<img src="img/etc/03.jpg">
+					</div>
+					<div id="RP_teacher_detail">
+						<div id="RP_teacher_name">이윤지(24)</div>
+						<div id="RP_teacher_exp">육아경험 몇년</div>
+						<div id="RP_teacher_sch">ㅇㅇ대학교 ㅋㅋ과</div>
+						<div id="RP_teacher_tag">#음악, #음악, #미술</div>
+					</div>
+				</div>
+				<div id="RP_Reservation">
+				<b>예약하기<br><br></b>
+					<div id="RP_date_time">
+						<div id="RP_date">날짜
+							<input type="text" id="RP_datepicker">
+						</div>
+						<div id="RP_time">시간
+							<select id="RP_StartTime">
+								<option value="" selected="selected">시간선택</option>
+								<option value="">00</option> <option value="">01</option>
+								<option value="">02</option> <option value="">03</option>
+								<option value="">04</option> <option value="">05</option>
+								<option value="">06</option> <option value="">07</option>
+								<option value="">08</option> <option value="">09</option>
+								<option value="">10</option> <option value="">11</option>
+								<option value="">12</option> <option value="">13</option>
+								<option value="">14</option> <option value="">15</option>
+								<option value="">16</option> <option value="">17</option>
+								<option value="">18</option> <option value="">19</option>
+								<option value="">20</option> <option value="">21</option>
+								<option value="">22</option> <option value="">23</option>
+								<option value="">24</option>
+							</select>
+							부터
+							<select id="RP_StartTime">
+								<option value="" selected="selected">시간선택</option>
+								<option value="">00</option> <option value="">01</option>
+								<option value="">02</option> <option value="">03</option>
+								<option value="">04</option> <option value="">05</option>
+								<option value="">06</option> <option value="">07</option>
+								<option value="">08</option> <option value="">09</option>
+								<option value="">10</option> <option value="">11</option>
+								<option value="">12</option> <option value="">13</option>
+								<option value="">14</option> <option value="">15</option>
+								<option value="">16</option> <option value="">17</option>
+								<option value="">18</option> <option value="">19</option>
+								<option value="">20</option> <option value="">21</option>
+								<option value="">22</option> <option value="">23</option>
+								<option value="">24</option>
+							</select>						
+						</div>
+					</div>
+					<div id="RP_expectedPay">
+						예상금액:
+					</div>
+					<div id="RP_child">
+						<ol id="RP_ChildSelectable">
+						  <li class="ui-state-default">나동엽(7)</li>
+						  <li class="ui-state-default" id="RP_newChild">새로추가</li>
+						</ol>
+					</div><br/>
+					<div id="RP_etc_require">
+						기타요구사항<br>
+						<textarea rows="5" cols="70"></textarea>
+					</div>
+				</div>
+				<div id="RP_warning">
+					<b>￼유의사항</b><br><br>
+						1. 청소하지 않아요<br>
+						2. 지정된 것만 합니다.<br>
+						3.이 사이트는 책임지지 않아요. <br>
+						4.기재된 내용과 다를 시 책임X<br>
+						5. 후기 남겨주세요.<br>
+						6. 선생님들이 확인을 미처 못할 수도<br>				
+				</div>
+					<input style="margin-top:1em;" type="checkbox">이 내용을 꼼꼼히 읽었으며 동의합니다
+				
+				<div id="RP_btns">
+					<div id="RP_makeReservation">예약하기</div>
+					<div id="RP_cancelReservation">취소하기</div>
+				</div>
+			</div>
+			<div id="RP_2page" style="display:none;">
+				<img src="img/ReservationPage/RP-logo.png"><br/>
+				<span id="RP_thanx">감사합니다</span><br/>
+				선생님에게 메시지가 전송되었습니다.<br/>
+				선생님이 수락시 연락이 올 것입니다.<br/>
+				
+				<div id="RP_gotoMain">메인으로 돌아가기</div>
+				<div id="RP_gotoMyPage">신청현황 확인하기</div>
+			</div>
+		</div>
+	</body>
+</html>
