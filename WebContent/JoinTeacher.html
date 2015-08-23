@@ -6,50 +6,166 @@
 		
 		<title>애디터</title>
 		
+		<!-- CSS 추가 -->
 		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/jquery-ui.min.css">
+		<link rel="stylesheet" href="css/jquery-ui.structure.css">
 		<link rel="stylesheet" href="css/joinTeacher.css">
 		
-		<script src="js/bootstrap.min.js"></script>
-		<script src="js/joinTeacher.js"></script>
+		<!-- JS 추가 -->
 		<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/jquery-ui.min.js"></script>
+		<script src="js/joinTeacher.js"></script>
+		
+		
 	</head>
 
 	<body>
-		<div id="top">애;디터 선생님 등록하기</div>
-		<div id="content1">
-			이름 : <input type="text" name="name"><br>
-			이메일 : <input type="text" name="e-mail"><br>
-			휴대폰 : <input type="text" name="phone"><br>
-			주소 : <input type="text" name="address"><br>
-			자기소개 : <input type="text" name="self_intro"><br>
+		<div id="JT_bg"></div>
+		<div id="top_img">
+			<div id="top_bgimg">
+				<img id="joinTeacherbg" src="img/jointeacher_bg.jpg">
+				<img id="joinTeacherthumb" src="img/etc/02.jpg">
+			</div>
+		</div>
+		<div id="top_title">
+				애;디터 선생님 등록하기
+		</div>
+		<div class="joinTeacher-content" id="content1" style="diyplay:block;">
+			이름<br/>
+			<input type="text" name="name"><br/><br/>
+			이메일<br/>
+			<input type="text" name="e-mail"><br><br/>
+			휴대폰<br/>
+			<input type="text" name="phone"><br><br>
+			주소<br/>
+			<input type="text" name="address"><br><br/>
+			자기소개<br/>
+			<input type="text" name="self_intro"><br><br/>
 			학생증/베이비시터 자격증 인증<br>
-			<input type="file" name="certification"> <br>
+			<input type="file" name="certification"> <br><br/>
 			선생님 이용약관<br>
-			<textarea rows="2" cols="2">ㅎㅎ;;</textarea>
+			<textarea readonly rows="2" cols="50">ㅎㅎ;;</textarea><br/>
 			<input type="checkbox" name="agreement" value="agree">동의
-			<input type="checkbox" name="agreement" value="disagree">반대 
+			<input type="checkbox" name="agreement" value="disagree">반대	<br/>		
 		</div>
 		
-		<div id="content2">
+		<div class="joinTeacher-content" id="content2" style="display:none;">
 			경력여부<br>
+			
+			<br/><br/>
 			대상아동연령<br>
+			<select id="joinTeacher_selage">
+				<option value="" selected="selected">아이 나이</option>
+				<option value="">4</option>
+				<option value="">5</option>
+				<option value="">6</option>
+				<option value="">7</option>
+				<option value="">8</option>
+				<option value="">9</option>
+				<option value="">10</option>
+				<option value="">11</option>
+				<option value="">12</option>
+				<option value="">13</option>
+			</select>
+			<br/><br/>
 			원하는 지역<br>
+			
 			자신의 일일 돌봄 자기소개<br>
+			<textarea rows="4" cols="50"></textarea><br><br/>
+			
 			활동 태그<br>
-			활동사진 추가(선택)<br>
+			<input type="checkbox"> 놀이
+			<input type="checkbox"> 책
+			<input type="checkbox"> 영어
+			<input type="checkbox"> 중국어<br/>
+ 			<input type="checkbox"> 일어
+			<input type="checkbox"> 악기
+			<input type="checkbox"> 운동
+			<input type="checkbox"> 학습<br/>
+			<input type="checkbox"> 지도
+			<input type="checkbox"> 정서발달
+			<input type="checkbox"> 숙제
+			<input type="checkbox"> 등하원
+			<br/><br/>
+			
+			활동사진 추가(선택)<br/>
+			<input type="file"><br><br/>
+			
 		</div>
 		
-		<div id="content3">
+		<div class="joinTeacher-content" id="content3" style="display:none;">
 			시급<br>
+			1인당 시급
+			<select id="selage">
+				<option value="" selected="selected">선</option>
+				<option value="">0.5</option>
+				<option value="">0.6</option>
+				<option value="">0.7</option>
+				<option value="">0.8</option>
+				<option value="">0.9</option>
+				<option value="">1</option>
+				<option value="">1.1</option>
+				<option value="">1.2</option>
+				<option value="">1.3</option>
+			</select><br/><br/>
 			형제 보육가능 여부<br>
+			<input type="radio" name="multi-care" value="impossible" checked>불가능
+			<input type="radio" name="multi-care" value="1">1명
+			<input type="radio" name="multi-care" value="2">2명
+			<input type="radio" name="multi-care" value="3">3명 이상
+			<br/><br/>
 			최소 활동 시간<br>
+			<select id="selage">
+				<option value="" selected="selected">선택</option>
+				<option value="">0.5</option>
+				<option value="">0.6</option>
+				<option value="">0.7</option>
+				<option value="">0.8</option>
+				<option value="">0.9</option>
+				<option value="">1</option>
+				<option value="">1.1</option>
+				<option value="">1.2</option>
+				<option value="">1.3</option>
+			</select><br/><br/>
 			즉시연락가능여부<br>
+			<input type="radio" name="JT-imm" value="yes" checked>yes
+			<input type="radio" name="JT-imm" value="no">no<br><br>
 			정기교육신청받기여부<br>
+			<input type="radio" name="JT-monthly" value="yes" checked>yes
+			<input type="radio" name="JT-monthly" value="no">no<br><br>
 			원하는날짜(복수선택가능)<br>
+			<ol id="date-selectable">
+			  <li class="ui-state-default">월</li>
+			  <li class="ui-state-default">화</li>
+			  <li class="ui-state-default">수</li>
+			  <li class="ui-state-default">목</li>
+			  <li class="ui-state-default">금</li>
+			  <li class="ui-state-default">토</li>
+			  <li class="ui-state-default">일</li>
+			</ol><br><br><br><br>
 			구체적 날짜 지정(4주 이내)<br>
 			가능 시간대(복수 가능)<br>
 		</div>
 		
-		<div id="content4"></div>
+		<div class="joinTeacher-content" id="content4" style="display:none;">
+			<div id="JT-finish">
+				<img src="img/JT-finish.png"><br>
+				일일교육 등록이 완료되었습니다.<br>감사합니다</div>
+			<div id="JT-warning">
+			<span id="JT-warn-title">유의사항</span><br><br>
+			1.자격 미달 되었다고 생각될 시, 등록이 거부될 수 있습니다.<br>
+			2. 거짓된 정보의 등록으로 인한 책임은 본인에게 있습니다.
+			</div>
+			<div id="JT_home_btn"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+			<br>메인으로 가기</div>
+		</div>
+		<div id="JTP-bg">
+		<div id="joinTeacher_pagination">
+			<span id="joinTeacher_back" class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
+			<span id="joinTeacher_next"  class="glyphicon glyphicon-menu-right" aria-hidden="true"></span> 
+		</div>
+		</div>
 	</body>
 </html>

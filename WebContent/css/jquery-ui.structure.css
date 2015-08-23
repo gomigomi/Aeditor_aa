@@ -700,14 +700,18 @@ button.ui-button::-moz-focus-inner {
 }
 
 .ui-slider-horizontal {
-	height: .8em;
+	height: .2em;
+	background-color: rgb(222,222,222);
 }
 .ui-slider-horizontal .ui-slider-handle {
-	top: -.3em;
+	top: -.5em;
 	margin-left: -.6em;
+	background-color: rgb(144,212,186);
+	border-radius: 100%;
 }
 .ui-slider-horizontal .ui-slider-range {
 	top: 0;
+	background-color: rgb(144,212,186);
 	height: 100%;
 }
 .ui-slider-horizontal .ui-slider-range-min {

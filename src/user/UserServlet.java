@@ -53,51 +53,30 @@ public class UserServlet extends HttpServlet {
 //		printout.flush();
 //	}
 //
-//	public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-//		response.setContentType("application/json; charset=UTF-8");//CREATE
-//
-//		PrintWriter printout = response.getWriter();
-//		JSONObject JObject = new JSONObject();
-//		String type = request.getParameter("type");
-//
-//		UserDao dao = new UserDao();
-////		Map<String, String[]> userParam = request.getParameterMap();
-//
-//		try{
-//			if(type.equals("1")){	//Sign in API
-//				Map<String, String[]> userParam = request.getParameterMap();				
-//				JObject.put("result", dao.postUser(userParam));
-//				
-//			}else if(type.equals("2")){	//Update API
-//
-//				String savePath = "/Users/gomi/workspace/AYH_NewDesign/WebContent/img/thumb";
-////				String savePath = "/Users/john/AYH_NewDesign/WebContent/img/thumb";
-//				int maxSize = 5*1024*1024;
-//				
-//				MultipartRequest multi = new MultipartRequest(request, savePath, maxSize, "UTF-8", new DefaultFileRenamePolicy());
-//			
-//				Map<String, String> userUpdateParam = new HashMap<String, String>();
-//				
-//				String thumbName=multi.getFilesystemName("thumb");
-//			
-//				userUpdateParam.put("id",multi.getParameter("id").toString());
-//				userUpdateParam.put("pass",multi.getParameter("pass").toString());
-//				userUpdateParam.put("name",multi.getParameter("name").toString());
-//				userUpdateParam.put("thumb",thumbName);
-//				
-//				JObject.put("result", dao.updateUserImg(userUpdateParam));
-//				
-//				}else if(type.equals("3")){
-//					Map<String, String[]> updateUserParam = request.getParameterMap();		
-//					JObject.put("result", dao.updateUser(updateUserParam));
-//				}
-//		}catch(JSONException e){
-//			
-//			e.printStackTrace();
-//		}
-//		printout.print(JObject);
-//		printout.flush();
-//	}
+	public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		response.setContentType("application/json; charset=UTF-8");//CREATE
+
+		PrintWriter printout = response.getWriter();
+		JSONObject JObject = new JSONObject();
+		
+		String type = request.getParameter("type");
+
+		UserDao dao = new UserDao();
+//		Map<String, String[]> userParam = request.getParameterMap();
+
+		try{
+			if(type.equals("1")){	//Sign in API
+				Map<String, String[]> userParam = request.getParameterMap();				
+				JObject.put("result", dao.postUser(userParam));
+				
+			}
+		}catch(JSONException e){
+			
+			e.printStackTrace();
+		}
+		printout.print(JObject);
+		printout.flush();
+	}
 //
 //	public void doDelete(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 //		response.setContentType("application/json; charset=UTF-8");//DELETE

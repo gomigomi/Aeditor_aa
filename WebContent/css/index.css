@@ -152,8 +152,74 @@
 .item-wrapper{
     background-color: rebeccapurple;
     display: inline-block;
-    width: 14em;
+    width: 16em;
     height: 16em;
-    border-radius: 2em;
-    margin: 0.5em;
+    border-radius: 100%;
+    margin: 1.5em;
+}
+.ModalBtn{
+    background-color: rgb(144,212,186);
+    border-radius: 100%;
+    width: 7em;
+    height: 7em;
+    text-align: center;
+    display: table;
+    margin: 0 auto;
+    font-weight: bold;
+    color: white;
+    margin-top: 2em;
+}
+.ModalBtn span{
+    position: relative;
+    top: 2em;
+    font-size: large;
+}
+#signUpInput{
+    width:80%;
+    margin:0 auto;
+    margin-top: 2em;
+}
+#signUpInput input{
+    width: 100%;
+    border-radius: 0.5em;
+    border: 1px solid rgb(187,187,187);
+    margin: 0.2em 0;
+    padding: .5em;
+}
+#Agreement{
+    font-size: x-small;
+    width: 80%;
+    margin: 0 auto;
+    color: rgb(170,170,170);
+    margin-top: 2em;
+}
+#Agreement input{
+}
+#logInInput{
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 2em;
+}
+#logInInput input{
+    width: 100%;     border-radius: 0.5em;     border: 1px solid rgb(187,187,187);     margin: 0.2em 0;     padding: .5em;
+}
+#save_info{
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 0.7em;
+}
+#login_modal_signUp{}
+#login_modal_signUp_btn{
+    color: rgb(230,64,74);
+}
+#login_modal_find{}
+#login_modal_find_btn{
+    color: rgb(230,64,74);
+}
+#FindArea{
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 2em;
+    color: rgb(170,170,170);
+    font-weight: 500;
 }
