@@ -40,6 +40,7 @@ $(function(){
 		source: availableTags
 	});
 	
+<<<<<<< HEAD
 })
 $(function(){
 	$('#RegisterBtn').click(function(){		
@@ -96,4 +97,20 @@ $(function(){
 			});
 		}
 	})
+=======
+	$('#user_id').mouseover(function(){
+	    $('#user_id_dropdown').slideDown();
+	})
+		
+	$('#gotoParentMyPage').click(function(){
+		window.location.href = "ParentMyPage.html";
+	})
+	$('#gotoTeacherMyPage').click(function(){
+		window.location.href = "TeacherMyPage.html";
+	})
+	$('#gotoJoinTeacher').click(function(){
+		window.location.href = "JoinTeacher.html";
+	})
+	
+>>>>>>> 8aef3afd8f92120df908d6b99cb19bfb9a99bad3
 })

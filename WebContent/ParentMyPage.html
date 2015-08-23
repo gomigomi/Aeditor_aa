@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<!-- CSS 추가 -->
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/ParentMyPage.css">
+		<link rel="stylesheet" href="css/jquery-ui.min.css">
+		<link rel="stylesheet" href="css/jquery-ui.structure.css">
+		
+		<!-- JS 추가 -->
+		<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/jquery-ui.min.js"></script>
+		<script src="js/ParentMyPage.js"></script>
+	</head>
+	<body>
+	<div id="wrapper">
+		<div id="PMP_profile">
+			<div id="PMP_img">
+				<img src="img/etc/03.jpg">
+			</div>
+			<div id="PMP_requestMenu">현재 예약 목록</div>
+			<div id="PMP_requestList">
+				<ol>
+					<li>8.28 황민하 선생님-미수락</li>
+					<li>8.29 황민하 선생님-미수락</li>
+					<li>8.30 황민하 선생님-미수락</li>
+				</ol>
+			</div>
+			<div id="PMP_childMenu">아동 목록</div>
+			<div id="PMP_childList">
+				<ol>
+					<li>나동엽(9세)</li>
+					<li id="addChild" data-toggle="modal" data-target="#AddChildModal">
+					+새아동추가</li>
+				</ol>
+			</div>
+			
+		</div>
+		<div id="PMP_contentWrapper">
+			<div id="PMP_TabMenu">
+				<div id="PMPTab_Message">메시지함</div>
+				<div id="PMPTab_Request">수락내역</div>
+				<div id="PMPTab_Diary">아이보육일지</div>	
+			</div>
+			<div id="PMP_contents">
+				<div id="PMP_Message">메시지창입니당</div>
+				<div id="PMP_Request">수락내역입니당</div>
+				<div id="PMP_Diary">보육일지입니당</div>
+			</div>
+		</div>
+		</div>
+
+		<!-- AddChild Modal -->
+		<div class="modal fade" id="AddChildModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		  <div class="modal-dialog" style="width: 25em;">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		      </div>
+		      <div class="modal-body">
+		       	<table>
+					<tr>
+						<td>이름
+						</td>
+						<td>나이
+						</td>
+					</tr>
+					
+					<tr>
+						<td><input type="text" id="AC_name"> 
+						</td>
+						<td><input type="text" id="AC_age">
+						</td>
+					</tr>
+					
+					<tr>
+						<td>현재 교육기관
+						</td>
+						<td>질병, 병 여부
+						</td>
+					</tr>
+					
+					<tr>
+						<td><input type="text" id="AC_school">
+						</td>
+						<td><input type="text" id="AC_disease">
+						</td>
+					</tr>
+					
+					<tr>
+						<td>좋아하는
+						</td>
+						<td>싫어하는
+						</td>
+					</tr>
+					
+					<tr>
+						<td><input type="text" id="AC_like">
+						</td>
+						<td><input type="text" id="AC_dislike">
+						</td>
+					</tr>
+					
+					<tr>
+						<td>성격
+						</td>
+						<td>형제 순서
+						</td>
+					</tr>
+					
+					<tr>
+						<td><input type="text" id="AC_character">
+						</td>
+						<td><input type="text" id="AC_sisbro">
+						</td>
+					</tr>
+					
+					<tr>
+						<td colspan="2">기타 당부사항
+						</td>
+					</tr>
+					
+					<tr>
+						<td colspan="2">
+						<textarea style="width: 22.5em;" id="AC_extraComment"></textarea>
+						</td>
+					</tr>
+				</table>
+				<div id="PMP_AC_Btns">
+		      	<div id="PMP_ACregisterBtn">등록</div>
+		      	<div id="PMP_ACcancelBtn">취소</div>
+		      </div>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+	</body>
+</html>
