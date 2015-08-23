@@ -20,7 +20,7 @@ body{
     position: absolute;
     z-index: 2;
     border-radius: 100%;
-    width: 12%;
+    width: 8em;
     top: 11em;
     left: 17%;
     border: 0.3em solid white;
