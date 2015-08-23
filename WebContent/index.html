@@ -22,12 +22,27 @@
 	<body>
 		<div id="fixed_top">
 			<span id="logo"><img id="logo_img" src="img/logo.png"/></span>
-			<span id="help" class="top_right"><button id="help_btn">도움말</button></span>
-			<span id="user_on" class="top_right" style="display:none">썸네일+아이디</span>
-			<span id="user_off" class="top_right">
+			<div id="topRightItems">
+			
+			<div id="user_on" class="top_right">
+				<img id="user_thumb" src="img/etc/04.jpg">
+				<div id="user_id">snut301@naver.com
+				<div id="user_id_dropdown" style="display:none;">
+					<ol>
+						<li id="gotoParentMyPage">마이페이지</li>
+						<li id="gotoTeacherMyPage">선생님페이지</li>
+						<li id="gotoJoinTeacher">선생님 등록하기</li>
+					</ol>
+				</div>
+				</div>
+			</div>
+			<div id="user_off" class="top_right" style="display:none">
 				<button id="login_btn" type="button" data-toggle="modal" data-target="#logIn">로그인</button>
 				<button id="signup_btn" type="button" data-toggle="modal" data-target="#signUp">회원가입</button>
-			</span>
+			</div>
+			
+			<div id="help" class="top_right"><button id="help_btn">도움말</button></div>
+			</div>
 		</div>
 		
 		<div id="content_wrapper">
