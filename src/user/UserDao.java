@@ -68,6 +68,7 @@ public class UserDao {
 	public String searchEmail(Map<String, String[]> userParam){
 		Connection conn=null;
 		Statement stmt=null;
+		ResultSet rs;
 		String result="success";
 		
 		try{
@@ -77,7 +78,7 @@ public class UserDao {
 			String sql=" SELECT name FROM user" +
 			" WHERE name= " + userParam.get("name")[0].toString();
 			
-			stmt.executeUpdate(sql);
+			rs=stmt.executeQuery(sql);
 
 			stmt.close();
 			conn.close();

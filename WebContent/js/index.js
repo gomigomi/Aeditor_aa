@@ -40,20 +40,18 @@ $(function(){
 		source: availableTags
 	});
 	
-<<<<<<< HEAD
-})
 $(function(){
 	$('#RegisterBtn').click(function(){		
 		var name=$('#SignupName').val();
 		var email=$('#SignupEmail').val();
 		var pass=$('#SignupPass').val()
 		var phone=$('#SignupPhone').val();
-		
+		//Search Email
 		$.ajax({
 			url: '/Aeditor_aa/User?type="searchEmail"',
 			method : 'get',
 			dataType: 'json',
-			data: param,
+			data: result,
 			success: function(res){
 				alert('회원가입이 완료되었습니다!');
 			},
@@ -96,21 +94,19 @@ $(function(){
 				error: function(){}	
 			});
 		}
-	})
-=======
+	});
+
 	$('#user_id').mouseover(function(){
 	    $('#user_id_dropdown').slideDown();
-	})
+	});
 		
 	$('#gotoParentMyPage').click(function(){
 		window.location.href = "ParentMyPage.html";
-	})
+	});
 	$('#gotoTeacherMyPage').click(function(){
 		window.location.href = "TeacherMyPage.html";
-	})
+	});
 	$('#gotoJoinTeacher').click(function(){
 		window.location.href = "JoinTeacher.html";
-	})
-	
->>>>>>> 8aef3afd8f92120df908d6b99cb19bfb9a99bad3
-})
+	});
+})});
