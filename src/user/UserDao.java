@@ -15,7 +15,7 @@ public class UserDao {
 	static final String DB_URL = "jdbc:mysql://1.255.55.98:3306/Aeditor";
 
 	static final String USER = "root";
-	static final String PASS = "ra&eul";
+	static final String PASS = "U27nd?6N4rd";
 	
 	/**
 	 * 커넥션 공동 메소드

@@ -7,9 +7,10 @@
 		
 		<!-- CSS 추가 -->
 		<link rel="stylesheet" href="css/bootstrap.min.css">
-		<link rel="stylesheet" href="css/index.css">
 		<link rel="stylesheet" href="css/jquery-ui.min.css">
 		<link rel="stylesheet" href="css/jquery-ui.structure.css">
+		<link rel="stylesheet" href="css/custom.css">
+		<link rel="stylesheet" href="css/index.css">
 		
 		<!-- JS 추가 -->
 		<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
@@ -24,7 +25,7 @@
 			<span id="logo"><img id="logo_img" src="img/logo.png"/></span>
 			<div id="topRightItems">
 			
-			<div id="user_on" class="top_right">
+			<div id="user_on" class="top_right" style="display:none">
 				<img id="user_thumb" src="img/etc/04.jpg">
 				<div id="user_id">snut301@naver.com
 				<div id="user_id_dropdown" style="display:none;">
@@ -36,7 +37,7 @@
 				</div>
 				</div>
 			</div>
-			<div id="user_off" class="top_right" style="display:none">
+			<div id="user_off" class="top_right">
 				<button id="login_btn" type="button" data-toggle="modal" data-target="#logIn">로그인</button>
 				<button id="signup_btn" type="button" data-toggle="modal" data-target="#signUp">회원가입</button>
 			</div>
