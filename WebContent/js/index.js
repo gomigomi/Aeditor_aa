@@ -110,11 +110,16 @@ $(function(){
 				pass: pass
 			},
 			success: function(res){
-				alert('환영합니다!');
-				window.sessionStorage.setItem('email',res);
-				$('#logIn').modal('hide');
-				$('#user_off').hide();
-				$('#user_on').show();
+				if(!res.res){
+					alert('로그인 실패');
+				}else{
+					alert('환영합니다!');
+					window.sessionStorage.setItem('email',res.res);
+					$('#logIn').modal('hide');
+					$('#user_off').hide();
+					$('#user_email').html(res.res);
+					$('#user_on').show();
+				}
 			},
 			error: function(){
 				alert('로그인 실패');
