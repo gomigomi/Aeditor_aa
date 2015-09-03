@@ -9,7 +9,6 @@ var availableTags=[
 ];
 
 $(function(){
-	if(){}
 	$('#logo').click(function(){
 		location.reload();
 	})
@@ -49,19 +48,6 @@ $(function(){
 		var email=$('#SignupEmail').val();
 		var pass=$('#SignupPass').val()
 		var phone=$('#SignupPhone').val();
-<<<<<<< HEAD
-		//Search Email
-		$.ajax({
-			url: '/Aeditor_aa/User?type="searchEmail"',
-			method : 'get',
-			dataType: 'json',
-			data: result,
-			success: function(res){
-				alert('이미 등록된 이메일입니다!');
-			},
-			error: function(){}
-		});
-=======
 //		//중복검사
 //		$.ajax({
 //			url: '/Aeditor_aa/User?type="searchEmail"',
@@ -73,7 +59,6 @@ $(function(){
 //			},
 //			error: function(){}
 //		});
->>>>>>> 6f8e131295b65bbd90eb583d5a2378a8dbe10e3c
 		if(!$('#SignupName').val()){
 			alert('이름을 입력해주세요!');
 		}
