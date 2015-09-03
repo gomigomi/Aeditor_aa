@@ -1,0 +1,8 @@
+.pointerCursor{
+	cursor:pointer;
+}
+.input-number{
+	text-align:right;
+	IME-MODE:disabled;
+	width:2em;
+}

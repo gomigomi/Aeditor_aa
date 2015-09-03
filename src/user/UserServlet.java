@@ -16,21 +16,21 @@ import org.json.JSONObject;
 public class UserServlet extends HttpServlet {
 	private static final long serialVersionUID=1L;
 	
-//	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-//		response.setContentType("application/json; charset=UTF-8");//READ
-//
-//		PrintWriter printout = response.getWriter();
-//		JSONObject JObject = new JSONObject();
-//		String type = request.getParameter("type");
-//
-//		UserDao dao = new UserDao();
-//
-//		try{
-//			if(type.equals("1")){	//User Info API
-//				String user_id=request.getParameter("id");
-//				
-//				JObject.put("result", dao.getUser(user_id));
-//			}else if(type.equals("2")){	//Login API
+	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		response.setContentType("application/json; charset=UTF-8");//READ
+
+		PrintWriter printout = response.getWriter();
+		JSONObject JObject = new JSONObject();
+		String type = request.getParameter("type");
+
+		UserDao dao = new UserDao();
+
+		try{
+			if(type.equals("1")){	//User Info API
+				Map<String, String[]> loginParam = request.getParameterMap();			
+				JObject.put("res", dao.loginUser(loginParam));
+			}
+//			else if(type.equals("2")){	//Login API
 //				
 //				String id = request.getParameter("id");
 //				String pass = request.getParameter("pass");
@@ -42,17 +42,17 @@ public class UserServlet extends HttpServlet {
 //				
 //				JObject.put("result", dao.checkUser(check_id));
 //			}
-//
-//
-//		}catch (JSONException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
-//
-//		printout.print(JObject);
-//		printout.flush();
-//	}
-//
+
+
+		}catch (JSONException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		printout.print(JObject);
+		printout.flush();
+	}
+
 	public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.setContentType("application/json; charset=UTF-8");//CREATE
 
@@ -65,24 +65,6 @@ public class UserServlet extends HttpServlet {
 //		Map<String, String[]> userParam = request.getParameterMap();
 
 		try{
-			if(type.equals("1")){	//Sign in API
-				Map<String, String[]> userParam = request.getParameterMap();				
-				JObject.put("result", dao.postUser(userParam));
-				
-				
-			}
-			if(type.equals("1")){	//Sign in API
-				Map<String, String[]> userParam = request.getParameterMap();				
-				JObject.put("result", dao.postUser(userParam));
-			}
-			if(type.equals("1")){	//Sign in API
-				Map<String, String[]> userParam = request.getParameterMap();				
-				JObject.put("result", dao.postUser(userParam));
-			}
-			if(type.equals("1")){	//Sign in API
-				Map<String, String[]> userParam = request.getParameterMap();				
-				JObject.put("result", dao.postUser(userParam));
-			}
 			if(type.equals("1")){	//Sign in API
 				Map<String, String[]> userParam = request.getParameterMap();				
 				JObject.put("result", dao.postUser(userParam));

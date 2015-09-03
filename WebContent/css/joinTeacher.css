@@ -2,46 +2,48 @@ body{
     background-color: rgb(222,222,222);
 }
 #top_bgimg{
-    position: absolute;
-    width: 100%;
-}
-#top_img{
     position: relative;
     width: 100%;
+    text-align: center;
+}
+#top_img{
+    position: absolute;
+    width: 100%;
     height: 19em;
+    top: 0;
 }
 #joinTeacherbg{
-    position: absolute;
+    position: relative;
     width: 100%;
     height: 14em;
     z-index: 1;
 }
 #joinTeacherthumb{
-    position: absolute;
+    position: relative;
     z-index: 2;
     border-radius: 100%;
-    width: 8em;
-    top: 11em;
-    left: 17%;
+    width: 10em;
+    top: -5em;
     border: 0.3em solid white;
+    left: -17em;
 }
 #top_title{
     font-weight: bold;
     font-size: large;
-    left: 15%;
     position: relative;
     padding-left: 1.5em;
+    bottom: -16em;
 }
 #content4{
     padding-bottom:1em;
 }
 .joinTeacher-content{
-    width: 70%;
+    width: 650px;
     margin: 0 auto;
     font-size: medium;
     font-weight: bold;
     color: rgb(129,129,129);
-    margin-top: 1em;
+    /* margin-top: 1em; */
     background-color: white;
     padding-left: 2.5em;
     padding-right: 2.5em;
@@ -52,6 +54,11 @@ body{
     border: 1px solid rgb(145,145,145);
     border-radius: .3em;
     padding: 0.2em;
+    font-weight: 200;
+    padding-left: 1em;
+    color: black;
+    font-size: 10pt;
+    height: 2.5em;
 }
 .joinTeacher-content textarea{
 	background-color: rgb(220,220,220);
@@ -65,12 +72,11 @@ body{
     font-size: 2em;
 }
 #JT_bg{
-    width: 70%;
-    position: absolute;
+    width: 650px;
     background-color: white;
-    left: 15%;
     z-index: -1;
-    height: 50%;
+    height: 25em;
+    margin: 0 auto;
 }
 #JT-finish{
     background-color: rgb(189,189,189);
@@ -110,7 +116,7 @@ body{
     vertical-align: middle;
 }
 #JTP-bg{
-    width: 70%;
+    width: 650px;
     background-color: white;
     margin: 0 auto;
     padding: 1em;

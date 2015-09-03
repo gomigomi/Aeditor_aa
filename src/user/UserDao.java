@@ -34,7 +34,39 @@ public class UserDao {
 		}
 		return dbConn;
 	}
-	
+	public String loginUser(Map<String, String[]> loginParam){
+		Connection conn=null;
+		Statement stmt=null;
+		String result="";
+		
+		String email=loginParam.get("email").toString();
+		String pass=loginParam.get("pass").toString();
+		
+		try{
+			conn=getConnection();
+			stmt = conn.createStatement();
+			
+			String sql="SELECT email FROM user WHERE email='"+email+"' AND pass = '"+pass+"'";
+			ResultSet rs=stmt.executeQuery(sql);
+			
+			while(rs.next()){
+				result=rs.getString("email");
+			}
+
+			rs.close();
+			stmt.close();
+			conn.close();
+			
+		}catch(SQLException se){
+			se.printStackTrace();
+		}catch(Exception e){
+			e.printStackTrace();
+		}finally{
+		}
+		
+		return result;
+		
+	}
 	public String postUser(Map<String, String[]> userParam){
 		
 		Connection conn=null;
@@ -45,8 +77,8 @@ public class UserDao {
 			conn=getConnection();
 			
 			stmt=conn.createStatement();
-			String sql="INSERT INTO user(name, email, phone, pass, class)" +
-			"VALUES('"+userParam.get("name")[0].toString()+"','"+userParam.get("email")[0].toString()+"','"+userParam.get("phone")[0].toString()+"','"+userParam.get("pass")[0].toString()+"','1')";
+			String sql="INSERT INTO user(name, email, phone, pass)" +
+			"VALUES('"+userParam.get("name")[0].toString()+"','"+userParam.get("email")[0].toString()+"','"+userParam.get("phone")[0].toString()+"','"+userParam.get("pass")[0].toString()+"')";
 			
 			stmt.executeUpdate(sql);
 

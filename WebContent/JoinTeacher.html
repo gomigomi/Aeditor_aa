@@ -10,7 +10,9 @@
 		<link rel="stylesheet" href="css/bootstrap.min.css">
 		<link rel="stylesheet" href="css/jquery-ui.min.css">
 		<link rel="stylesheet" href="css/jquery-ui.structure.css">
+		<link rel="stylesheet" href="css/custom.css">
 		<link rel="stylesheet" href="css/joinTeacher.css">
+		
 		
 		<!-- JS 추가 -->
 		<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
@@ -22,58 +24,65 @@
 	</head>
 
 	<body>
-		<div id="JT_bg"></div>
+		<div id="JT_bg">
+			<div id="top_title"> 애;디터 선생님 등록하기</div>
+		</div>
 		<div id="top_img">
 			<div id="top_bgimg">
 				<img id="joinTeacherbg" src="img/jointeacher_bg.jpg">
 				<img id="joinTeacherthumb" src="img/etc/02.jpg">
 			</div>
 		</div>
-		<div id="top_title">
-				애;디터 선생님 등록하기
-		</div>
 		<div class="joinTeacher-content" id="content1" style="diyplay:block;">
 			이름<br/>
 			<input type="text" name="name"><br/><br/>
 			이메일<br/>
-			<input type="text" name="e-mail"><br><br/>
+			<input type="text" name="e-mail" style="width:15em;"><br><br/>
 			휴대폰<br/>
-			<input type="text" name="phone"><br><br>
+			<input type="text" name="phone" style="width:15em;"><br><br>
 			주소<br/>
-			<input type="text" name="address"><br><br/>
-			자기소개<br/>
-			<input type="text" name="self_intro"><br><br/>
+			<input type="text" id="JT-addr" name="address" style="width:25em;"><br><br/>
+			자기소개(300자 이내)<br/>
+			<textarea id="self-intro" rows="4" cols="50"></textarea><br><br>
 			학생증/베이비시터 자격증 인증<br>
 			<input type="file" name="certification"> <br><br/>
 			선생님 이용약관<br>
 			<textarea readonly rows="2" cols="50">ㅎㅎ;;</textarea><br/>
-			<input type="checkbox" name="agreement" value="agree">동의
-			<input type="checkbox" name="agreement" value="disagree">반대	<br/>		
+			<input type="checkbox" class="JT-agree" name="agreement" value="agree">동의
+			<input type="checkbox" class="JT-agree" name="agreement" value="disagree">반대	<br/>		
 		</div>
 		
 		<div class="joinTeacher-content" id="content2" style="display:none;">
-			경력여부<br>
+			경력 
+			<input type="text" class="input-number" name="exp-year" value="0" onkeypress="if (event.keyCode<48|| event.keyCode>57)  event.returnValue=false;">년 
+			<input type="text" class="input-number" name="exp-month" value="0" onkeypress="if (event.keyCode<48|| event.keyCode>57)  event.returnValue=false;">개월<br>
+			<br>
+			* 해당하는 부분에 체크해주세요<br><br>
+			<input type="checkbox" name="exp" value="licence">저는 자격증을 소지하고 있습니다.<br>
+			<input type="checkbox" name="exp" value="expert">저는 양육경험이 있습니다.<br>
+			<input type="checkbox" name="exp" value="major">저는 아이 교육에 관련한 학과를 졸업했습니다.<br>
 			
 			<br/><br/>
-			대상아동연령<br>
-			<select id="joinTeacher_selage">
+			희망아동연령
+			<select id="reqAge">
 				<option value="" selected="selected">아이 나이</option>
-				<option value="">4</option>
-				<option value="">5</option>
-				<option value="">6</option>
-				<option value="">7</option>
-				<option value="">8</option>
-				<option value="">9</option>
-				<option value="">10</option>
-				<option value="">11</option>
-				<option value="">12</option>
-				<option value="">13</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7</option>
+				<option value="8">8</option>
+				<option value="9">9</option>
+				<option value="10">10</option>
+				<option value="11">11</option>
+				<option value="12">12</option>
+				<option value="13">13</option>
+				<option value="14">상관없음</option>
 			</select>
 			<br/><br/>
 			원하는 지역<br>
 			
-			자신의 일일 돌봄 자기소개<br>
-			<textarea rows="4" cols="50"></textarea><br><br/>
+			자신의 일일 돌봄 자세소개(200자 이내)<br>
+			<textarea id="JT-attitudeIntro" rows="4" cols="50"></textarea><br><br/>
 			
 			활동 태그<br>
 			<input type="checkbox"> 놀이
@@ -98,36 +107,34 @@
 		<div class="joinTeacher-content" id="content3" style="display:none;">
 			시급<br>
 			1인당 시급
-			<select id="selage">
-				<option value="" selected="selected">선</option>
-				<option value="">0.5</option>
-				<option value="">0.6</option>
-				<option value="">0.7</option>
-				<option value="">0.8</option>
-				<option value="">0.9</option>
-				<option value="">1</option>
-				<option value="">1.1</option>
-				<option value="">1.2</option>
-				<option value="">1.3</option>
+			<select id="reqPay">
+				<option value="" selected="selected">선택</option>
+				<option value="0.6">6000원</option>
+				<option value="0.7">7000원</option>
+				<option value="0.8">8000원</option>
+				<option value="0.9">9000원</option>
+				<option value="1">10000원</option>
+				<option value="1.1">11000원</option>
+				<option value="1.2">12000원</option>
+				<option value="1.3">13000원</option>
+				<option value="1.4">13000원 이상</option>
 			</select><br/><br/>
 			형제 보육가능 여부<br>
-			<input type="radio" name="multi-care" value="impossible" checked>불가능
+			<input type="radio" name="multi-care" value="0" checked>불가능
 			<input type="radio" name="multi-care" value="1">1명
 			<input type="radio" name="multi-care" value="2">2명
 			<input type="radio" name="multi-care" value="3">3명 이상
 			<br/><br/>
 			최소 활동 시간<br>
-			<select id="selage">
-				<option value="" selected="selected">선택</option>
-				<option value="">0.5</option>
-				<option value="">0.6</option>
-				<option value="">0.7</option>
-				<option value="">0.8</option>
-				<option value="">0.9</option>
-				<option value="">1</option>
-				<option value="">1.1</option>
-				<option value="">1.2</option>
-				<option value="">1.3</option>
+			<select id="reqTime">
+				<option value="" selected="selected">선택</option>			
+				<option value="0.5">30분</option>
+				<option value="1">1시간</option>
+				<option value="1.5">1시간 30분</option>
+				<option value="2">2시간</option>
+				<option value="2.5">2시간 30분</option>
+				<option value="3">3시간</option>
+				<option value="3.5">3시간 이상</option>
 			</select><br/><br/>
 			즉시연락가능여부<br>
 			<input type="radio" name="JT-imm" value="yes" checked>yes
@@ -163,8 +170,8 @@
 		</div>
 		<div id="JTP-bg">
 		<div id="joinTeacher_pagination">
-			<span id="joinTeacher_back" class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
-			<span id="joinTeacher_next"  class="glyphicon glyphicon-menu-right" aria-hidden="true"></span> 
+			<span id="joinTeacher_back" class="pointerCursor glyphicon glyphicon-menu-left" aria-hidden="true"></span>
+			<span id="joinTeacher_next"  class="pointerCursor glyphicon glyphicon-menu-right" aria-hidden="true"></span> 
 		</div>
 		</div>
 	</body>
