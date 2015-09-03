@@ -97,7 +97,7 @@ public class UserDao {
 		
 		return result;
 	}
-	public String searchEmail(Map<String, String[]> userParam){
+	public boolean emailExist(String email){
 		Connection conn=null;
 		Statement stmt=null;
 		ResultSet rs;
@@ -107,13 +107,18 @@ public class UserDao {
 			conn=getConnection();
 			
 			stmt=conn.createStatement();
-			String sql=" SELECT name FROM user" +
-			" WHERE name= " + userParam.get("name")[0].toString();
+			String sql=" SELECT email FROM user" +
+			" WHERE name= " + email;
 			
 			rs=stmt.executeQuery(sql);
 
 			stmt.close();
 			conn.close();
+			if(rs.next())
+			{
+				return true;
+			}
+			else return false;
 
 		}catch(SQLException se){
 			se.printStackTrace();
@@ -121,13 +126,7 @@ public class UserDao {
 		}catch(Exception e){
 			e.printStackTrace();
 			result = "fail";
-		}finally{
-			
-		}
-		
-		return result;
+		}finally{}
+			return false;
 	}
-	
-	
-
 }
