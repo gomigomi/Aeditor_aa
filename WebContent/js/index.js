@@ -40,18 +40,73 @@ $(function(){
 		source: availableTags
 	});
 	
+$(function(){
+	$('#RegisterBtn').click(function(){		
+		var name=$('#SignupName').val();
+		var email=$('#SignupEmail').val();
+		var pass=$('#SignupPass').val()
+		var phone=$('#SignupPhone').val();
+		//Search Email
+		$.ajax({
+			url: '/Aeditor_aa/User?type="searchEmail"',
+			method : 'get',
+			dataType: 'json',
+			data: result,
+			success: function(res){
+				alert('회원가입이 완료되었습니다!');
+			},
+			error: function(){}
+		});
+		if() {
+			
+		}
+		if(!$('#SignupName').val()){
+			alert('이름을 입력해주세요!');
+		}
+		else if(!$('#SignupEmail').val()){
+			alert('이메일을 입력해주세요!');
+		}
+		else if(!$('#SignupPhone').val()){
+			alert('폰번호를 입력해주세요!');
+		}
+		else if(!$('#SignupPass').val()){
+			alert('비밀번호를 입력해주세요!');
+		}
+		else if($('#SignupPassConf').val()!=pass){
+			alert('비밀번호가 다릅니다!');
+		}
+		else{
+			var param={
+					name: name,
+					email: email,
+					pass: pass,
+					phone: phone
+			}
+			
+			$.ajax({
+				url: '/Aeditor_aa/User?type=1',
+				method : 'post',
+				dataType: 'json',
+				data: param,
+				success: function(res){
+					alert('회원가입이 완료되었습니다!');
+				},
+				error: function(){}	
+			});
+		}
+	});
+
 	$('#user_id').mouseover(function(){
 	    $('#user_id_dropdown').slideDown();
-	})
+	});
 		
 	$('#gotoParentMyPage').click(function(){
 		window.location.href = "ParentMyPage.html";
-	})
+	});
 	$('#gotoTeacherMyPage').click(function(){
 		window.location.href = "TeacherMyPage.html";
-	})
+	});
 	$('#gotoJoinTeacher').click(function(){
 		window.location.href = "JoinTeacher.html";
-	})
-	
-})
+	});
+})});
