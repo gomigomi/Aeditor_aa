@@ -16,6 +16,7 @@
 		<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
 		<script src="js/jquery-ui.min.js"></script>
+		<script src="js/custom.js"></script>
 		<script src="js/index.js"></script>
 		
 	</head>
@@ -27,7 +28,7 @@
 			
 			<div id="user_on" class="top_right" style="display:none">
 				<img id="user_thumb" src="img/etc/04.jpg">
-				<div id="user_id">snut301@naver.com
+				<div id="user_id"><span id="user_email">snut301@naver.com</span>
 				<div id="user_id_dropdown" style="display:none;">
 					<ol>
 						<li id="gotoParentMyPage">마이페이지</li>
@@ -35,6 +36,7 @@
 						<li id="gotoJoinTeacher">선생님 등록하기</li>
 					</ol>
 				</div>
+				<div id="logout" class="top_right"><button id="logout_btn">로그아웃</button></div>
 				</div>
 			</div>
 			<div id="user_off" class="top_right">
@@ -43,7 +45,6 @@
 			</div>
 			
 			<div id="help" class="top_right"><button id="help_btn">도움말</button></div>
-			<div id="logout" class="top_right"><button id="logout_btn">로그아웃</button></div>
 			</div>
 		</div>
 		

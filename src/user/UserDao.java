@@ -39,8 +39,8 @@ public class UserDao {
 		Statement stmt=null;
 		String result="";
 		
-		String email=loginParam.get("email").toString();
-		String pass=loginParam.get("pass").toString();
+		String email=loginParam.get("email")[0].toString();
+		String pass=loginParam.get("pass")[0].toString();
 		
 		try{
 			conn=getConnection();
