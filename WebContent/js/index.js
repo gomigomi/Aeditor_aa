@@ -9,6 +9,7 @@ var availableTags=[
 ];
 
 $(function(){
+	if(){}
 	$('#logo').click(function(){
 		location.reload();
 	})
@@ -53,13 +54,10 @@ $(function(){
 			dataType: 'json',
 			data: result,
 			success: function(res){
-				alert('회원가입이 완료되었습니다!');
+				alert('이미 등록된 이메일입니다!');
 			},
 			error: function(){}
 		});
-		if() {
-			
-		}
 		if(!$('#SignupName').val()){
 			alert('이름을 입력해주세요!');
 		}
