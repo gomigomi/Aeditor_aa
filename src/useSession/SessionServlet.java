@@ -26,7 +26,7 @@ public class SessionServlet extends HttpServlet{
 		SessionDao dao = new SessionDao();
 		try{
 			if(type.equals("1")){	//User Info API
-				//Map<String, String[]> loginParam = request.getParameterMap();			
+				//Map<String, String[]> loginParam = request.getParameterMap();
 				JObject.put("res", dao.getName_Phone(request.getParameter("email")));
 			}
 		} catch (JSONException e) {

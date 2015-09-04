@@ -1,19 +1,19 @@
 $(function(){
 	//load name and phone when load this page
 	$(document).ready(function() {
-		var email = window.sessionStorage.getItem('email');
+		var email = window.sessionStorage.getItem('email');		
 		$.ajax({
-			url: '/Aeditor_aa/useSession?type=1',
+			url: '/Aeditor_aa/UseSession?type=1',
 			method : 'get',
 			dataType: 'json',
 			data: {
 				email : email
 			},
 			success: function(res){
-				
 			console.log(res.res.name);
-//				$(#).attr.val() = res.;
-//				$(#).attr.val() = res.;
+				$('#JT-ReadOnly-name').val(res.res.name);
+				$('#JT-ReadOnly-email').val(email);
+				$('#JT-ReadOnly-phone').val(res.res.phone);
 			},
 			error: function(){}
 	})

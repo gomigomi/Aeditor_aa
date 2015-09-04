@@ -38,12 +38,13 @@ public class SessionDao {
 			conn=getConnection();
 			stmt = conn.createStatement();
 			
-			String sql="SELECT name,phone FROM user WHERE email= "+email;
+			String sql="SELECT name, phone FROM user WHERE email= '"+email+"'";
 			ResultSet rs=stmt.executeQuery(sql);
 			while(rs.next()){
 				result.put("name", rs.getString("name"));
 				result.put("phone", rs.getString("phone"));
 			}
+			
 			rs.close();
 			stmt.close();
 			conn.close();
