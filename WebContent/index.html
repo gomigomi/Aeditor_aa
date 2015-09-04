@@ -28,16 +28,19 @@
 			
 			<div id="user_on" class="top_right" style="display:none">
 				<img id="user_thumb" src="img/etc/04.jpg">
-				<div id="user_id"><span id="user_email">snut301@naver.com</span>
-				<div id="user_id_dropdown" style="display:none;">
-					<ol>
-						<li id="gotoParentMyPage">마이페이지</li>
-						<li id="gotoTeacherMyPage">선생님페이지</li>
-						<li id="gotoJoinTeacher">선생님 등록하기</li>
-					</ol>
+				<div id="user_id">
+					<ul id="gnb" style="padding-left:0; list-style:none;">
+					    <li>
+					        <a href="" id="user_email">Menu1</a>
+					        <ul>
+					            <li><a href="">마이 페이지</a></li>
+					            <li><a href="">선생님 페이지</a></li>
+					            <li><a href="">선생님 등록하기</a></li>
+					        </ul>
+					    </li>
+					</ul>
 				</div>
 				<div id="logout" class="top_right"><button id="logout_btn">로그아웃</button></div>
-				</div>
 			</div>
 			<div id="user_off" class="top_right">
 				<button id="login_btn" type="button" data-toggle="modal" data-target="#logIn">로그인</button>

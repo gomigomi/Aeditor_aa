@@ -245,7 +245,7 @@
     display: inline-block;
 }
 
-#user_id_dropdown{
+/* #user_id_dropdown{
     position: absolute;
     top: 2em;
     right: 3.5em;
@@ -261,7 +261,15 @@
     background-color: rgba(255,255,255,.5);
     margin-bottom: .2em;
     padding: .3em 1em;
-}
+} */
 #gotoParentMyPage{}
-div#user_id_dropdown{}
+
+#gnb { background:#ccc;}
+#gnb > li {display:inline-block;}
+#gnb > li > a {display:block; line-height:25px;  text-align:center;min-width: 7em;}
+#gnb > li.on a {background:#777; color:#fff;}
+#gnb li ul {position:absolute;  height:0; overflow:hidden;list-style: none;padding-left: 0;}
+#gnb li.on ul {height:auto; background:#777;}
+#gnb li ul li a {margin:3px 0 3px 10px; color:#fff;}
+
 #gotoJoinTeacher{}
