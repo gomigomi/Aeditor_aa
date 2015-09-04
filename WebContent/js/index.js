@@ -36,18 +36,23 @@ $(function(){
 		var email=$('#SignupEmail').val();
 		var pass=$('#SignupPass').val()
 		var phone=$('#SignupPhone').val();
-//		//중복검사
-//		$.ajax({
-//			url: '/Aeditor_aa/User?type="searchEmail"',
-//			method : 'get',
-//			dataType: 'json',
-//			data: result,
-//			success: function(res){
-//				alert('회원가입이 완료되었습니다!');
-//			},
-//			error: function(){}
-//		});
-		if(!$('#SignupName').val()){
+		var isExist=false;
+		$.ajax({
+			url: '/Aeditor_aa/User?type=2',
+			method : 'get',
+			dataType: 'json',
+			data: {
+				email : email
+			},
+			success: function(res){
+				isExist=res;
+			},
+			error: function(){}
+		});
+		if(isExist=true) {
+			alert('이미 가입된 이메일입니다!');
+		}
+		else if(!$('#SignupName').val()){
 			alert('이름을 입력해주세요!');
 		}
 		else if(!$('#SignupEmail').val()){

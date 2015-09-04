@@ -30,19 +30,10 @@ public class UserServlet extends HttpServlet {
 				Map<String, String[]> loginParam = request.getParameterMap();			
 				JObject.put("res", dao.loginUser(loginParam));
 			}
-//			else if(type.equals("2")){	//Login API
-//				
-//				String id = request.getParameter("id");
-//				String pass = request.getParameter("pass");
-//				
-//				JObject.put("result", dao.loginUser(id, pass));
-//			}else if(type.equals("3")){	//ID중복 API
-//				
-//				String check_id = request.getParameter("id");
-//				
-//				JObject.put("result", dao.checkUser(check_id));
-//			}
-
+			else if(type.equals("2")){	//Check whether Email exists
+				
+				JObject.put("res", dao.emailExist(request.getParameter("email")));
+			}
 
 		}catch (JSONException e) {
 			// TODO Auto-generated catch block

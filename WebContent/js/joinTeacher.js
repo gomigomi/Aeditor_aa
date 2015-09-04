@@ -1,4 +1,23 @@
 $(function(){
+	//load name and phone when load this page
+	$(document).ready(function() {
+		var email = window.sessionStorage.getItem('email');
+		$.ajax({
+			url: '/Aeditor_aa/useSession?type=1',
+			method : 'get',
+			dataType: 'json',
+			data: {
+				email : email
+			},
+			success: function(res){
+				
+			console.log(res.res.name);
+//				$(#).attr.val() = res.;
+//				$(#).attr.val() = res.;
+			},
+			error: function(){}
+	})
+	})
 	
 	//1P
 	var addr; var selfIntro;
