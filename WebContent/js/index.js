@@ -7,6 +7,26 @@ var availableTags=[
 	'용산구∣서울', '은평구∣서울', '종로구∣서울', '중구∣서울',
 	'중랑구∣서울', 'hing'
 ];
+//when page ready, check session value 
+$(document).ready(function() {
+	var sessionExist=false;
+//	window.sessionStorage.getItem('email');
+//	var member_id = "<%=(String)session.getAttribute("email")%>;
+//	sessionStroage.removeItem("name");
+
+//	sessionStroage.clear();
+	
+	if(sessionExist) {
+		sessionExist=true;
+		$('#logIn').modal('hide');
+		$('#user_off').hide();
+		$('#user_email').html(res.res);
+		$('#user_on').show();
+	}
+	else {
+		
+	}
+})
 
 $(function(){
 	$('#logo').click(function(){
@@ -124,12 +144,19 @@ $(function(){
 	});
 		
 	$('#gotoParentMyPage').click(function(){
-		window.location.href = "ParentMyPage.html";
+		window.location.href = "/ParentMyPage.html";
 	});
 	$('#gotoTeacherMyPage').click(function(){
-		window.location.href = "TeacherMyPage.html";
+		window.location.href = "/TeacherMyPage.html";
 	});
 	$('#gotoJoinTeacher').click(function(){
-		window.location.href = "JoinTeacher.html";
+		alert('조인티처');
+		window.location.href = "/JoinTeacher.html";
 	});
 })});
+
+//logout-session clear 
+$('#logout_btn').click(function(){
+	sessionStroage.removeItem("name");
+	window.location.href = "/index.html";
+});

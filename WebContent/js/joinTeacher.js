@@ -1,7 +1,9 @@
 $(function(){
 	//load name and phone when load this page
+	var name; var phone;
+	var email = window.sessionStorage.getItem('email');
 	$(document).ready(function() {
-		var email = window.sessionStorage.getItem('email');		
+				
 		$.ajax({
 			url: '/Aeditor_aa/UseSession?type=1',
 			method : 'get',
@@ -10,10 +12,13 @@ $(function(){
 				email : email
 			},
 			success: function(res){
-			console.log(res.res.name);
+				console.log(res.res.name);
 				$('#JT-ReadOnly-name').val(res.res.name);
 				$('#JT-ReadOnly-email').val(email);
 				$('#JT-ReadOnly-phone').val(res.res.phone);
+				
+				name=$('#JT-ReadOnly-name').val();
+				phone=$('#JT-ReadOnly-phone').val();
 			},
 			error: function(){}
 	})
@@ -99,6 +104,31 @@ $(function(){
 				$('#content3').hide();
 				$('#content4').show();
 				$('#joinTeacher_pagination').hide();
+			
+				var param = {
+					//1P
+					var addr; var selfIntro;
+					//2P
+					var expYear; var expMonth; var licence; var expert; var major;
+					var reqAge; var attitudeIntro;
+					//3P
+					var reqPay; var multiCare; var reqTime; var immContact;
+					var monthlyWork;
+				}
+				$.ajax({
+					url: '/Aeditor_aa/User?type=3',
+					method : 'post',
+					dataType: 'json',
+					data: {
+						var param = {
+							
+						}
+					},
+					success: function(res){
+						isExist=res;
+					},
+					error: function(){}
+				});
 			}
 		}
 	});
