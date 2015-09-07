@@ -107,25 +107,21 @@ $(function(){
 			
 				var param = {
 					//1P
-					var addr; var selfIntro;
+					addr:addr, selfIntro:selfIntro,
 					//2P
-					var expYear; var expMonth; var licence; var expert; var major;
-					var reqAge; var attitudeIntro;
+					expYear:expYear, expMonth:expMonth, licence:licence, expert:expert, major:major,
+					reqAge:reqAge, attitudeIntro:attitudeIntro,
 					//3P
-					var reqPay; var multiCare; var reqTime; var immContact;
-					var monthlyWork;
+					reqPay:reqPay, multiCare:multiCare, reqTime:reqTime, immContact:immContact,
+					monthlyWork:monthlyWork
 				}
 				$.ajax({
-					url: '/Aeditor_aa/User?type=3',
+					url: '/Aeditor_aa/User?type=2',
 					method : 'post',
 					dataType: 'json',
-					data: {
-						var param = {
-							
-						}
-					},
-					success: function(res){
-						isExist=res;
+					data: param,
+					success: function(){
+						alert('선생님정보 등록완료');
 					},
 					error: function(){}
 				});

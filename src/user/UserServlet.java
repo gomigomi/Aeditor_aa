@@ -57,8 +57,13 @@ public class UserServlet extends HttpServlet {
 
 		try{
 			if(type.equals("1")){	//Sign in API
-				Map<String, String[]> userParam = request.getParameterMap();				
+				Map<String, String[]> userParam = request.getParameterMap();			
 				JObject.put("result", dao.postUser(userParam));
+			}
+			else if(type.equals("2")) {
+				Map<String,String[]> teacherParam = request.getParameterMap();
+				JObject.put("result", dao.postTeacher(teacherParam));
+				
 			}
 		}catch(JSONException e){
 			
