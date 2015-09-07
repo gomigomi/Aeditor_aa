@@ -59,6 +59,9 @@ public class UserServlet extends HttpServlet {
 			if(type.equals("1")){	//Sign in API
 				Map<String, String[]> userParam = request.getParameterMap();			
 				JObject.put("result", dao.postUser(userParam));
+			}else if(type.equals("2")){
+				Map<String, String[]> childParam=request.getParameterMap();
+				JObject.put("result", dao.postChildInfo(childParam));
 			}
 			else if(type.equals("2")) {
 				Map<String,String[]> teacherParam = request.getParameterMap();

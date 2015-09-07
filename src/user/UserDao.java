@@ -159,4 +159,38 @@ public class UserDao {
 		}finally{}
 			return false;
 	}
+	
+
+	public String postChildInfo(Map<String, String[]> userParam){
+		
+		Connection conn=null;
+		Statement stmt=null;
+		String result="success";
+		
+		try{
+			conn=getConnection();
+			
+			stmt=conn.createStatement();
+			String sql="INSERT INTO childInfo(email, name, age, school, disease, like, dislike, character, sisBro, extraReq)" +
+			"VALUES('"+userParam.get("email")[0].toString()+"','"+userParam.get("name")[0].toString()+"','"+userParam.get("age")[0].toString()+"','"+userParam.get("school")[0].toString()+"','"
+					+userParam.get("disease")[0].toString()+"','"+userParam.get("like")[0].toString()+"','"+userParam.get("dislike")[0].toString()+"','"+userParam.get("character")[0].toString()+"','"
+							+userParam.get("sisBro")[0].toString()+"','"+userParam.get("extraReq")[0].toString()+"')";
+			
+			stmt.executeUpdate(sql);
+
+			stmt.close();
+			conn.close();
+
+		}catch(SQLException se){
+			se.printStackTrace();
+			result = "fail";
+		}catch(Exception e){
+			e.printStackTrace();
+			result = "fail";
+		}finally{
+			
+		}
+		
+		return result;
+	}
 }
