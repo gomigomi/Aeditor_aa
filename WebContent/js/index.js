@@ -9,22 +9,13 @@ var availableTags=[
 ];
 //when page ready, check session value 
 $(document).ready(function() {
-	var sessionExist=false;
-//	window.sessionStorage.getItem('email');
-//	var member_id = "<%=(String)session.getAttribute("email")%>;
-//	sessionStroage.removeItem("name");
-
-//	sessionStroage.clear();
-	
-	if(sessionExist) {
-		sessionExist=true;
-		$('#logIn').modal('hide');
-		$('#user_off').hide();
-		$('#user_email').html(res.res);
+	var email=window.sessionStorage.getItem('email');
+	if(!email){
+		$('#user_on').hide();
+		$('#user_off').show();
+	}else{
 		$('#user_on').show();
-	}
-	else {
-		
+		$('#user_off').hide();
 	}
 })
 
@@ -153,10 +144,12 @@ $(function(){
 		alert('조인티처');
 		window.location.href = "/JoinTeacher.html";
 	});
-})});
+	})
 
-//logout-session clear 
-$('#logout_btn').click(function(){
-	sessionStroage.removeItem("name");
-	window.location.href = "/index.html";
+	//logout-session clear 
+	$('#logout_btn').click(function(){
+		sessionStorage.clear();
+		window.location.href = "index.html";
+	});
+
 });
