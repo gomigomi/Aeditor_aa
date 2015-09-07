@@ -97,7 +97,7 @@ public class UserDao {
 		
 		return result;
 	}
-	public String postTeacher(Map<String, String[]> userParam){
+	public String postTeacher(Map<String, String[]> teacherParam){
 		
 		Connection conn=null;
 		Statement stmt=null;
@@ -107,11 +107,17 @@ public class UserDao {
 			conn=getConnection();
 			
 			stmt=conn.createStatement();
-			String sql="INSERT INTO user(name, email, phone, pass)" +
-			"VALUES('"+userParam.get("name")[0].toString()+"','"+userParam.get("email")[0].toString()+"','"+userParam.get("phone")[0].toString()+"','"+userParam.get("pass")[0].toString()+"')";
-			
+			String sql="INSERT INTO teacherInfo(email,addr,selfInfo,expYear,expMonth,licence,expert,major,reqAge,attitudeIntro,reqPay,multiCare,reqTime,immContact,monthlyWork)" +
+			"VALUES('"+teacherParam.get("email")[0].toString()+"','"+teacherParam.get("addr")[0].toString()+"','"+teacherParam.get("selfInfo")[0].toString()+"','"+teacherParam.get("expYear")[0].toString()+"','"+teacherParam.get("expYear")[0].toString()+"','"
+					+teacherParam.get("expMonth")[0].toString()+"','"+teacherParam.get("licence")[0].toString()+"','"+teacherParam.get("expert")[0].toString()+"','"
+					+teacherParam.get("major")[0].toString()+"','"+teacherParam.get("reqAge")[0].toString()+"','"+teacherParam.get("attitudeIntro")[0].toString()+"','"+teacherParam.get("reqPay")[0].toString()+"','"+teacherParam.get("multiCare")[0].toString()+"','"
+					+teacherParam.get("reqTime")[0].toString()+"','"+teacherParam.get("immContact")[0].toString()+"','"+teacherParam.get("monthlyWork")[0].toString()+"')";
 			stmt.executeUpdate(sql);
 
+			sql= "UPDATE user" + 
+					"SET teacherReg=1" +
+					"WHERE email = ' "+teacherParam.get("email")[0].toString() + " ' ";
+					;
 			stmt.close();
 			conn.close();
 
@@ -137,7 +143,7 @@ public class UserDao {
 			
 			stmt=conn.createStatement();
 			String sql=" SELECT email FROM user" +
-			" WHERE name= " + email;
+			" WHERE name= '" + email + "'";
 			
 			rs=stmt.executeQuery(sql);
 
@@ -151,10 +157,10 @@ public class UserDao {
 
 		}catch(SQLException se){
 			se.printStackTrace();
-			result = "fail";
+			
 		}catch(Exception e){
 			e.printStackTrace();
-			result = "fail";
+			
 		}finally{}
 			return false;
 	}
