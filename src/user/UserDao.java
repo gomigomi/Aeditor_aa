@@ -131,7 +131,6 @@ public class UserDao {
 		Connection conn=null;
 		Statement stmt=null;
 		ResultSet rs;
-		String result="success";
 		
 		try{
 			conn=getConnection();
@@ -161,7 +160,7 @@ public class UserDao {
 	}
 	
 
-	public String postChildInfo(Map<String, String[]> userParam){
+	public String postChildInfo(Map<String, String[]> childParam){
 		
 		Connection conn=null;
 		Statement stmt=null;
@@ -171,10 +170,10 @@ public class UserDao {
 			conn=getConnection();
 			
 			stmt=conn.createStatement();
-			String sql="INSERT INTO childInfo(email, name, age, school, disease, like, dislike, character, sisBro, extraReq)" +
-			"VALUES('"+userParam.get("email")[0].toString()+"','"+userParam.get("name")[0].toString()+"','"+userParam.get("age")[0].toString()+"','"+userParam.get("school")[0].toString()+"','"
-					+userParam.get("disease")[0].toString()+"','"+userParam.get("like")[0].toString()+"','"+userParam.get("dislike")[0].toString()+"','"+userParam.get("character")[0].toString()+"','"
-							+userParam.get("sisBro")[0].toString()+"','"+userParam.get("extraReq")[0].toString()+"')";
+			
+			String sql="insert into `Aeditor`.`childInfo` ( `school`, `sisBro`, `character`, `age`, `like`, `email`, `disease`, `extraReq`, `dislike`, `name`) "+ 
+							"values ( '"+childParam.get("school")+"', '"+childParam.get("sisBro")+"', '"+childParam.get("character")+"', '"+childParam.get("age")+"', '"+childParam.get("like")+"', '"+childParam.get("email")+"', '"+childParam.get("disease")+"', '"+childParam.get("extraReq")+"', '"+childParam.get("dislike")+"', '"+childParam.get("name")+"')";
+			
 			
 			stmt.executeUpdate(sql);
 
