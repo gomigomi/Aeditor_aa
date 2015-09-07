@@ -17,6 +17,34 @@
 		<script src="js/ParentMyPage.js"></script>
 	</head>
 	<body>
+		<div id="fixed_top">
+			<span id="logo"><img id="logoMint" src="img/logo_mint.png"/></span>
+			<div id="topRightItems">
+			
+			<div id="user_on" class="top_right" style="display:none">
+				<img id="user_thumb" src="img/etc/04.jpg">
+				<div id="user_id">
+					<ul id="gnb" style="padding-left:0; list-style:none;">
+					    <li>
+					        <a href="" id="user_email">Menu1</a>
+					        <ul>
+					            <li><a href="ParentMyPage.html">마이 페이지</a></li>
+					            <li id="TeacherReg1"><a href="TeacherMyPage.html">선생님 페이지</a></li>
+					            <li id="TeacherReg0"><a href="JoinTeacher.html">선생님 등록하기</a></li>
+					        </ul>
+					    </li>
+					</ul>
+				</div>
+				<div id="logout" class="top_right"><button id="logout_btn">로그아웃</button></div>
+			</div>
+			<div id="user_off" class="top_right">
+				<button id="login_btn" type="button" data-toggle="modal" data-target="#logIn">로그인</button>
+				<button id="signup_btn" type="button" data-toggle="modal" data-target="#signUp">회원가입</button>
+			</div>
+			
+			<div id="help" class="top_right"><button id="help_btn">도움말</button></div>
+			</div>
+		</div>
 	<div id="wrapper">
 		<div id="PMP_profile">
 			<div id="PMP_img">
