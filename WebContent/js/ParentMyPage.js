@@ -27,6 +27,8 @@ $(function(){
 		}else if(!param.sisBro){
 			alert("자녀의 형제 유무를 입력해주세요.");
 		}else{
+			
+			console.log(param.email+param.name);
 			$.ajax({
 				url: '/Aeditor_aa/User?type=2',
 				method : 'post',
