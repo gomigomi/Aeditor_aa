@@ -1,5 +1,6 @@
 package user;
 
+import java.io.Console;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -107,17 +108,23 @@ public class UserDao {
 			conn=getConnection();
 			
 			stmt=conn.createStatement();
-			String sql="INSERT INTO teacherInfo(email,addr,selfInfo,expYear,expMonth,licence,expert,major,reqAge,attitudeIntro,reqPay,multiCare,reqTime,immContact,monthlyWork)" +
-			"VALUES('"+teacherParam.get("email")[0].toString()+"','"+teacherParam.get("addr")[0].toString()+"','"+teacherParam.get("selfInfo")[0].toString()+"','"+teacherParam.get("expYear")[0].toString()+"','"+teacherParam.get("expYear")[0].toString()+"','"
-					+teacherParam.get("expMonth")[0].toString()+"','"+teacherParam.get("licence")[0].toString()+"','"+teacherParam.get("expert")[0].toString()+"','"
-					+teacherParam.get("major")[0].toString()+"','"+teacherParam.get("reqAge")[0].toString()+"','"+teacherParam.get("attitudeIntro")[0].toString()+"','"+teacherParam.get("reqPay")[0].toString()+"','"+teacherParam.get("multiCare")[0].toString()+"','"
-					+teacherParam.get("reqTime")[0].toString()+"','"+teacherParam.get("immContact")[0].toString()+"','"+teacherParam.get("monthlyWork")[0].toString()+"')";
+			System.out.println(teacherParam.get("email")[0]);
+			String sql="INSERT INTO `Aeditor`.`teacherInfo`(`email`,`addr`,`selfInfo`,`expYear`,`expMonth`,`licence`,`expert`,`major`,`reqAge`,`attitudeIntro`,`reqPay`,`multiCare`,`reqTime`,`immContact`,`monthlyWork`) " +
+			" VALUES ( ' " +teacherParam.get("email")[0]+"', '"+teacherParam.get("addr")[0]+"', '"+teacherParam.get("selfInfo")[0]+"','"+teacherParam.get("expYear")[0]+"','"+teacherParam.get("expYear")[0]+"','"
+					+teacherParam.get("expMonth")[0]+"','"+teacherParam.get("licence")[0]+"','"+teacherParam.get("expert")[0]+"','"
+					+teacherParam.get("major")[0]+"','"+teacherParam.get("reqAge")[0]+"','"+teacherParam.get("attitudeIntro")[0]+"','"+teacherParam.get("reqPay")[0]+"','"+teacherParam.get("multiCare")[0]+"','"
+					+teacherParam.get("reqTime")[0]+"','"+teacherParam.get("immContact")[0]+"','"+teacherParam.get("monthlyWork")[0]+"' )";
+						
 			stmt.executeUpdate(sql);
+			
 
 			sql= "UPDATE user" + 
 					"SET teacherReg=1" +
-					"WHERE email = ' "+teacherParam.get("email")[0].toString() + " ' ";
-					;
+					"WHERE email = ' " +teacherParam.get("email")[0] + " ' ";
+			
+			stmt.executeUpdate(sql);
+			
+			
 			stmt.close();
 			conn.close();
 
@@ -171,7 +178,7 @@ public class UserDao {
 		Statement stmt=null;
 		String result="success";
 		
-		System.out.println("야임마 ");
+		System.out.println("�빞�엫留� ");
 		
 		try{
 			conn=getConnection();

@@ -9,6 +9,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.websocket.Session;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -61,7 +62,6 @@ public class UserServlet extends HttpServlet {
 				JObject.put("result", dao.postUser(userParam));
 			}else if(type.equals("2")){ //ChildRegister
 				Map<String, String[]> childParam=request.getParameterMap();
-				System.out.println("야");
 				JObject.put("result", dao.postChildInfo(childParam));
 			}
 			else if(type.equals("3")) { //JoinTeacher

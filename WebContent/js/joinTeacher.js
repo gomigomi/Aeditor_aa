@@ -114,9 +114,9 @@ $(function(){
 					//3P
 					reqPay:reqPay, multiCare:multiCare, reqTime:reqTime, immContact:immContact,
 					monthlyWork:monthlyWork
-				}
+				};
 				$.ajax({
-					url: '/Aeditor_aa/User?type=2',
+					url: '/Aeditor_aa/User?type=3',
 					method : 'post',
 					dataType: 'json',
 					data: param,
