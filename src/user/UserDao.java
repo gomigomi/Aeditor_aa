@@ -159,12 +159,13 @@ public class UserDao {
 			return false;
 	}
 	
-
 	public String postChildInfo(Map<String, String[]> childParam){
 		
 		Connection conn=null;
 		Statement stmt=null;
 		String result="success";
+		
+		System.out.println("야임마 ");
 		
 		try{
 			conn=getConnection();
@@ -172,7 +173,7 @@ public class UserDao {
 			stmt=conn.createStatement();
 			
 			String sql="insert into `Aeditor`.`childInfo` ( `school`, `sisBro`, `character`, `age`, `like`, `email`, `disease`, `extraReq`, `dislike`, `name`) "+ 
-							"values ( '"+childParam.get("school")+"', '"+childParam.get("sisBro")+"', '"+childParam.get("character")+"', '"+childParam.get("age")+"', '"+childParam.get("like")+"', '"+childParam.get("email")+"', '"+childParam.get("disease")+"', '"+childParam.get("extraReq")+"', '"+childParam.get("dislike")+"', '"+childParam.get("name")+"')";
+							"values ( '"+childParam.get("school")[0]+"', '"+childParam.get("sisBro")[0]+"', '"+childParam.get("character")[0]+"', '"+childParam.get("age")[0]+"', '"+childParam.get("like")[0]+"', '"+childParam.get("email")[0]+"', '"+childParam.get("disease")[0]+"', '"+childParam.get("extraReq")[0]+"', '"+childParam.get("dislike")[0]+"', '"+childParam.get("name")[0]+"')";
 			
 			
 			stmt.executeUpdate(sql);

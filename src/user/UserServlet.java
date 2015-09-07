@@ -61,6 +61,7 @@ public class UserServlet extends HttpServlet {
 				JObject.put("result", dao.postUser(userParam));
 			}else if(type.equals("2")){ //ChildRegister
 				Map<String, String[]> childParam=request.getParameterMap();
+				System.out.println("야");
 				JObject.put("result", dao.postChildInfo(childParam));
 			}
 			else if(type.equals("3")) { //JoinTeacher
