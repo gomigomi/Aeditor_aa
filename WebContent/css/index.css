@@ -244,31 +244,37 @@
     color: white;
     display: inline-block;
 }
-
-/* #user_id_dropdown{
-    position: absolute;
-    top: 2em;
-    right: 3.5em;
-    z-index: 10;
+#item1{
+	background-image: url(../img/etc/19.jpg);
+    width: 16em;
+    height: 16em;
+    background-size: contain;
 }
-#user_id_dropdown ol{
-    list-style: none;
-    text-align: left;
-    padding-left: 0;
-    padding: 0 1em;
+#item2{
+	background-image: url(../img/etc/18.jpg);
+    width: 16em;
+    height: 16em;
+    background-size: contain;
 }
-#user_id_dropdown ol li{
-    background-color: rgba(255,255,255,.5);
-    margin-bottom: .2em;
-    padding: .3em 1em;
-} */
+#item3{
+	background-image: url(../img/etc/17.jpg);
+    width: 16em;
+    height: 16em;
+    background-size: contain;
+}
+.item-title{
+    background-color: rgba(255,255,255,.7);
+    margin-top: 40%;
+    padding: .5em 0;
+    font-size: x-large;
+}
 #gotoParentMyPage{}
 
-#gnb { background:#ccc;}
+#gnb { background:transparent;}
 #gnb > li {display:inline-block;}
 #gnb > li > a {display:block; line-height:25px;  text-align:center;min-width: 7em;}
-#gnb > li.on a {background:#777; color:#fff;}
-#gnb li ul {position:absolute;  height:0; overflow:hidden;list-style: none;padding-left: 0;}
+#gnb > li.on a {color:#fff;}
+#gnb li ul {position:absolute;  text-align:center; height:0; overflow:hidden;list-style: none;padding-left: 0;}
 #gnb li.on ul {height:auto; background:	;}
 #gnb li ul li a {margin:3px 0 3px 10px; color:#fff;}
 

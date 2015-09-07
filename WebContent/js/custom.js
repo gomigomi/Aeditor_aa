@@ -1,25 +1,20 @@
-//로그인 체크
+//세션유지
 $(document).ready(function() {
-	
-//	var session = {
-//		id : window.sessionStorage.getItem('id'),
-//		name : window.sessionStorage.getItem('name')
-//	};
-//	var thumb = window.sessionStorage.getItem('thumb');
-//	var pass = window.sessionStorage.getItem('pw');
-	
-	var email= window.sessionStorage.getItem('email');
-	
+	var email=window.sessionStorage.getItem('email');
 	if(!email){
-		
-	}else{		
-		$('#user_off').hide();
-		
-		$('#user_email').empty();
-		$('#user_email').html(email);
+		$('#user_on').hide();
+		$('#user_off').show();
+	}else{
+		if(window.sessionStorage.getItem('teacherReg')==0){
+			$('#TeacherReg0').show();
+			$('#TeacherReg1').hide();
+		}else{
+			$('#TeacherReg0').hide();
+			$('#TeacherReg1').show();
+		}
 		$('#user_on').show();
+		$('#user_off').hide();
 	}
-	
-	
-	
-});
+})
+
+//

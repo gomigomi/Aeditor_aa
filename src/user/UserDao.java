@@ -35,10 +35,10 @@ public class UserDao {
 		}
 		return dbConn;
 	}
-	public String loginUser(Map<String, String[]> loginParam){
+	public HashMap <String, String> loginUser(Map<String, String[]> loginParam){
 		Connection conn=null;
 		Statement stmt=null;
-		String result="";
+		HashMap<String, String> result = new HashMap<String, String>();
 		
 		String email=loginParam.get("email")[0].toString();
 		String pass=loginParam.get("pass")[0].toString();
@@ -47,11 +47,12 @@ public class UserDao {
 			conn=getConnection();
 			stmt = conn.createStatement();
 			
-			String sql="SELECT email FROM user WHERE email='"+email+"' AND pass = '"+pass+"'";
+			String sql="SELECT email,teacherReg FROM user WHERE email='"+email+"' AND pass = '"+pass+"'";
 			ResultSet rs=stmt.executeQuery(sql);
 			
 			while(rs.next()){
-				result=rs.getString("email");
+				result.put("email", rs.getString("email"));
+				result.put("teacherReg", rs.getString("teacherReg"));
 			}
 
 			rs.close();

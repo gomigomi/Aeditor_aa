@@ -8,16 +8,7 @@ var availableTags=[
 	'중랑구∣서울', 'hing'
 ];
 //when page ready, check session value 
-$(document).ready(function() {
-	var email=window.sessionStorage.getItem('email');
-	if(!email){
-		$('#user_on').hide();
-		$('#user_off').show();
-	}else{
-		$('#user_on').show();
-		$('#user_off').hide();
-	}
-})
+
 
 $(function(){
 	$('#logo').click(function(){
@@ -118,10 +109,19 @@ $(function(){
 					alert('로그인 실패');
 				}else{
 					alert('환영합니다!');
-					window.sessionStorage.setItem('email',res.res);
+					window.sessionStorage.setItem('email',res.res.email);
+					window.sessionStorage.setItem('teacherReg',res.res.teacherReg);
+					console.log(res.res.teacherReg)
+					if(res.res.teacherReg==0){
+						$('#TeacherReg0').show();
+						$('#TeacherReg1').hide();
+					}else{
+						$('#TeacherReg0').hide();
+						$('#TeacherReg1').show();
+					}
 					$('#logIn').modal('hide');
 					$('#user_off').hide();
-					$('#user_email').html(res.res);
+					$('#user_email').html(res.res.email);
 					$('#user_on').show();
 				}
 			},
