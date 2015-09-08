@@ -66,7 +66,6 @@ public class UserServlet extends HttpServlet {
 			}
 			else if(type.equals("3")) { //JoinTeacher
 				Map<String,String[]> teacherParam = request.getParameterMap();
-				System.out.println(teacherParam.get("email")[0]);;
 				JObject.put("result", dao.postTeacher(teacherParam));
 			}
 		}catch(JSONException e){

@@ -102,31 +102,30 @@ public class UserDao {
 	public String postTeacher(Map<String, String[]> teacherParam){
 		
 		Connection conn=null;
-		Statement stmt=null;
+		Statement stmt1=null;
+		Statement stmt2=null;
 		String result="success";
 		
 		try{
 			conn=getConnection();
 			
-			stmt=conn.createStatement();
-			System.out.println("여기까지는 실행됨-postTeacher");
+			stmt1=conn.createStatement();
+			stmt2=conn.createStatement();
+			
+			System.out.println(teacherParam.get("email")[0].toString());
 			String sql="INSERT INTO `Aeditor`.`teacherInfo`(`email`,`addr`,`selfInfo`,`expYear`,`expMonth`,`licence`,`expert`,`major`,`reqAge`,`attitudeIntro`,`reqPay`,`multiCare`,`reqTime`,`immContact`,`monthlyWork`) " +
-			" VALUES ( ' " +teacherParam.get("email")[0].toString()+"', '"+teacherParam.get("addr")[0].toString()+"', '"+teacherParam.get("selfInfo")[0].toString()+"','"+teacherParam.get("expYear")[0].toString()+"','"+teacherParam.get("expYear")[0].toString()+"','"
-					+teacherParam.get("expMonth")[0].toString()+"','"+teacherParam.get("licence")[0].toString()+"','"+teacherParam.get("expert")[0].toString()+"','"
-					+teacherParam.get("major")[0].toString()+"','"+teacherParam.get("reqAge")[0].toString()+"','"+teacherParam.get("attitudeIntro")[0].toString()+"','"+teacherParam.get("reqPay")[0].toString()+"','"+teacherParam.get("multiCare")[0].toString()+"','"
-					+teacherParam.get("reqTime")[0].toString()+"','"+teacherParam.get("immContact")[0].toString()+"','"+teacherParam.get("monthlyWork")[0].toString()+"' )";
-						
-			stmt.executeUpdate(sql);
-			
+						" VALUES ( '" +teacherParam.get("email")[0].toString()+"', '"+teacherParam.get("addr")[0].toString()+"', '"+teacherParam.get("selfIntro")[0].toString()+"','"+teacherParam.get("expYear")[0].toString()+"','"
+							+teacherParam.get("expMonth")[0].toString()+"','"+teacherParam.get("licence")[0].toString()+"','"+teacherParam.get("expert")[0].toString()+"','"
+							+teacherParam.get("major")[0].toString()+"','"+teacherParam.get("reqAge")[0].toString()+"','"+teacherParam.get("attitudeIntro")[0].toString()+"','"+teacherParam.get("reqPay")[0].toString()+"','"+teacherParam.get("multiCare")[0].toString()+"','"
+							+teacherParam.get("reqTime")[0].toString()+"','"+teacherParam.get("immContact")[0].toString()+"','"+teacherParam.get("monthlyWork")[0].toString()+"' )";
 
-			sql= "UPDATE user" + 
-					"SET teacherReg=1" +
-					"WHERE email = ' " +teacherParam.get("email")[0] + " ' ";
+			String sql2= "update `Aeditor`.`user` set `teacherReg`=b'1' where `email`='"+teacherParam.get("email")[0].toString()+"'";
 			
-			stmt.executeUpdate(sql);
+			stmt1.executeUpdate(sql);
+			stmt2.executeUpdate(sql2);
 			
-			
-			stmt.close();
+			stmt1.close();
+			stmt2.close();
 			conn.close();
 
 		}catch(SQLException se){

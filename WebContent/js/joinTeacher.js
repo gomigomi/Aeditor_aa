@@ -56,6 +56,7 @@ $(function(){
 			}else{
 				$('#content1').hide();
 				$('#content2').show();
+				console.log(email);
 				console.log(addr);
 				console.log(selfIntro);
 			}
@@ -63,14 +64,14 @@ $(function(){
 			expYear=$('input:text[name="exp-year"]').val();
 			expMonth=$('input:text[name="exp-month"]').val();
 			if($('input[type="checkbox"][value="licence"]:checked').val()){
-				licence=true;
-			}else{ licence=false; }
+				licence=1;
+			}else{ licence=0; }
 			if($('input[type="checkbox"][value="expert"]:checked').val()){
-				expert=true;
-			}else{ expert=false; }
+				expert=1;
+			}else{ expert=0; }
 			if($('input[type="checkbox"][value="major"]:checked').val()){
-				major=true;
-			}else{ major=false; }
+				major=1;
+			}else{ major=0; }
 			reqAge=$('#reqAge option:selected').val();
 			attitudeIntro=$('#JT-attitudeIntro').val();
 			if(!reqAge){
@@ -104,8 +105,9 @@ $(function(){
 				$('#content3').hide();
 				$('#content4').show();
 				$('#joinTeacher_pagination').hide();
-			
+				
 				var param = {
+					email:email,
 					//1P
 					addr:addr, selfIntro:selfIntro,
 					//2P
@@ -115,6 +117,9 @@ $(function(){
 					reqPay:reqPay, multiCare:multiCare, reqTime:reqTime, immContact:immContact,
 					monthlyWork:monthlyWork
 				};
+				
+				console.log(param.email+param.addr+param.expYear);
+				
 				$.ajax({
 					url: '/Aeditor_aa/User?type=3',
 					method : 'post',
@@ -123,7 +128,9 @@ $(function(){
 					success: function(){
 						alert('선생님정보 등록완료');
 					},
-					error: function(){}
+					error: function(){
+						alert('실패');
+					}
 				});
 			}
 		}
