@@ -109,12 +109,12 @@ public class UserDao {
 			conn=getConnection();
 			
 			stmt=conn.createStatement();
-			System.out.println(teacherParam.get("email")[0]);
+			System.out.println("여기까지는 실행됨-postTeacher");
 			String sql="INSERT INTO `Aeditor`.`teacherInfo`(`email`,`addr`,`selfInfo`,`expYear`,`expMonth`,`licence`,`expert`,`major`,`reqAge`,`attitudeIntro`,`reqPay`,`multiCare`,`reqTime`,`immContact`,`monthlyWork`) " +
-			" VALUES ( ' " +teacherParam.get("email")[0]+"', '"+teacherParam.get("addr")[0]+"', '"+teacherParam.get("selfInfo")[0]+"','"+teacherParam.get("expYear")[0]+"','"+teacherParam.get("expYear")[0]+"','"
-					+teacherParam.get("expMonth")[0]+"','"+teacherParam.get("licence")[0]+"','"+teacherParam.get("expert")[0]+"','"
-					+teacherParam.get("major")[0]+"','"+teacherParam.get("reqAge")[0]+"','"+teacherParam.get("attitudeIntro")[0]+"','"+teacherParam.get("reqPay")[0]+"','"+teacherParam.get("multiCare")[0]+"','"
-					+teacherParam.get("reqTime")[0]+"','"+teacherParam.get("immContact")[0]+"','"+teacherParam.get("monthlyWork")[0]+"' )";
+			" VALUES ( ' " +teacherParam.get("email")[0].toString()+"', '"+teacherParam.get("addr")[0].toString()+"', '"+teacherParam.get("selfInfo")[0].toString()+"','"+teacherParam.get("expYear")[0].toString()+"','"+teacherParam.get("expYear")[0].toString()+"','"
+					+teacherParam.get("expMonth")[0].toString()+"','"+teacherParam.get("licence")[0].toString()+"','"+teacherParam.get("expert")[0].toString()+"','"
+					+teacherParam.get("major")[0].toString()+"','"+teacherParam.get("reqAge")[0].toString()+"','"+teacherParam.get("attitudeIntro")[0].toString()+"','"+teacherParam.get("reqPay")[0].toString()+"','"+teacherParam.get("multiCare")[0].toString()+"','"
+					+teacherParam.get("reqTime")[0].toString()+"','"+teacherParam.get("immContact")[0].toString()+"','"+teacherParam.get("monthlyWork")[0].toString()+"' )";
 						
 			stmt.executeUpdate(sql);
 			
@@ -179,15 +179,13 @@ public class UserDao {
 		Statement stmt=null;
 		String result="success";
 		
-		System.out.println("�빞�엫留� ");
-		
 		try{
 			conn=getConnection();
 			
 			stmt=conn.createStatement();
 			
 			String sql="insert into `Aeditor`.`childInfo` ( `school`, `sisBro`, `character`, `age`, `like`, `email`, `disease`, `extraReq`, `dislike`, `name`) "+ 
-							"values ( '"+childParam.get("school")[0]+"', '"+childParam.get("sisBro")[0]+"', '"+childParam.get("character")[0]+"', '"+childParam.get("age")[0]+"', '"+childParam.get("like")[0]+"', '"+childParam.get("email")[0]+"', '"+childParam.get("disease")[0]+"', '"+childParam.get("extraReq")[0]+"', '"+childParam.get("dislike")[0]+"', '"+childParam.get("name")[0]+"')";
+							"values ( '"+childParam.get("school")[0].toString()+"', '"+childParam.get("sisBro")[0].toString()+"', '"+childParam.get("character")[0].toString()+"', '"+childParam.get("age")[0].toString()+"', '"+childParam.get("like")[0].toString()+"', '"+childParam.get("email")[0].toString()+"', '"+childParam.get("disease")[0].toString()+"', '"+childParam.get("extraReq")[0].toString()+"', '"+childParam.get("dislike")[0].toString()+"', '"+childParam.get("name")[0].toString()+"')";
 			
 			
 			stmt.executeUpdate(sql);
